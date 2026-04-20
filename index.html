@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simply — Guide to minimalism, sustainable and intentional living">
+  <meta name="keywords" content="minimalism, sustainable living, intentional lifestyle, slow living, eco-friendly">
+  <title>Simply — Minimalism & Sustainable Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #F7F3EE;
+      --parchment: #EDE8DF;
+      --sage:    #7A8C6E;
+      --sage-light: #B5C4A8;
+      --sage-dark: #4A5E3E;
+      --terracotta: #C47B5A;
+      --charcoal: #2C2C28;
+      --muted:   #7A7A72;
+      --border:  #D8D0C4;
+      --white:   #FDFCFA;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(247, 243, 238, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; font-weight: 300; letter-spacing: .12em;
+      color: var(--charcoal); text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 12px; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-cta {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; padding: 10px 22px;
+      border: 1px solid var(--sage); color: var(--sage-dark);
+      background: transparent; cursor: pointer;
+      transition: all .2s; text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--sage); color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 60px 80px 60px;
+    }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 6vw, 84px);
+      font-weight: 300; line-height: 1.1;
+      color: var(--charcoal); margin-bottom: 28px;
+    }
+    .hero-title em { font-style: italic; color: var(--sage-dark); }
+    .hero-sub {
+      font-size: 16px; font-weight: 300; color: var(--muted);
+      max-width: 420px; line-height: 1.8; margin-bottom: 44px;
+    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
+    .btn-primary {
+      padding: 14px 32px; background: var(--sage-dark);
+      color: var(--white); font-size: 13px; font-weight: 500;
+      letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-primary:hover { background: var(--charcoal); }
+    .btn-ghost {
+      font-size: 13px; font-weight: 500; letter-spacing: .06em;
+      color: var(--muted); text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px; transition: color .2s, border-color .2s;
+    }
+    .btn-ghost:hover { color: var(--charcoal); border-color: var(--charcoal); }
+    .hero-right {
+      position: relative; overflow: hidden;
+      background: var(--parchment);
+    }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: sepia(15%) saturate(80%);
+    }
+    .hero-img-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #D4C9B8 0%, #B8C9A8 50%, #C9B8A8 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 120px; color: rgba(255,255,255,0.4);
+    }
+    .hero-stat {
+      position: absolute; bottom: 40px; left: 40px;
+      background: var(--white); padding: 20px 28px;
+    }
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px; font-weight: 300; color: var(--sage-dark);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-top: 4px;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      background: var(--sage-dark); padding: 14px 0; overflow: hidden;
+    }
+    .marquee-track {
+      display: flex; gap: 0;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-item {
+      font-size: 11px; font-weight: 500; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--sage-light);
+      padding: 0 40px;
+    }
+    .marquee-dot { color: var(--terracotta); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── SECTION HEADERS ── */
+    .section { padding: 100px 60px; }
+    .section-label {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 11px; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; max-width: 60px; height: 1px;
+      background: var(--terracotta);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 56px); font-weight: 300;
+      line-height: 1.15; color: var(--charcoal);
+    }
+    .section-title em { font-style: italic; color: var(--sage-dark); }
+
+    /* ── FEATURED POST ── */
+    .featured { background: var(--white); }
+    .featured-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+      align-items: center; max-width: 1200px; margin: 0 auto;
+    }
+    .featured-image {
+      aspect-ratio: 4/3; overflow: hidden;
+      background: linear-gradient(135deg, #C9D4B8 0%, #A8B898 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 80px; position: relative;
+    }
+    .featured-tag {
+      position: absolute; top: 20px; left: 20px;
+      background: var(--terracotta); color: var(--white);
+      font-size: 10px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; padding: 6px 14px;
+    }
+    .featured-content { padding: 20px 0; }
+    .post-meta {
+      font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    .post-meta span { color: var(--terracotta); }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 42px); font-weight: 400;
+      line-height: 1.2; color: var(--charcoal); margin-bottom: 18px;
+    }
+    .post-title em { font-style: italic; }
+    .post-excerpt {
+      font-size: 15px; font-weight: 300; color: var(--muted);
+      line-height: 1.8; margin-bottom: 28px;
+    }
+    .read-more {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--sage-dark);
+      text-decoration: none; border-bottom: 1px solid var(--sage-light);
+      padding-bottom: 2px; transition: all .2s;
+    }
+    .read-more:hover { color: var(--charcoal); border-color: var(--charcoal); }
+    .read-more-arrow { transition: transform .2s; }
+    .read-more:hover .read-more-arrow { transform: translateX(4px); }
+
+    /* ── BLOG GRID ── */
+    .grid-section { background: var(--cream); }
+    .posts-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 40px; max-width: 1200px; margin: 48px auto 0;
+    }
+    .post-card { cursor: pointer; }
+    .card-image {
+      aspect-ratio: 3/2; margin-bottom: 20px; overflow: hidden;
+      position: relative;
+    }
+    .card-img-bg {
+      width: 100%; height: 100%; transition: transform .5s ease;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 56px;
+    }
+    .post-card:hover .card-img-bg { transform: scale(1.04); }
+    .bg1 { background: linear-gradient(135deg, #D4C4A8 0%, #B8C9A0 100%); }
+    .bg2 { background: linear-gradient(135deg, #C4B8A8 0%, #A8C4B8 100%); }
+    .bg3 { background: linear-gradient(135deg, #B8C4A0 0%, #C8B0A0 100%); }
+    .bg4 { background: linear-gradient(135deg, #C0C8A8 0%, #B0A898 100%); }
+    .bg5 { background: linear-gradient(135deg, #C8B8A0 0%, #A8B8A8 100%); }
+    .bg6 { background: linear-gradient(135deg, #B8C0A0 0%, #C4A898 100%); }
+    .card-tag {
+      position: absolute; bottom: 0; left: 0;
+      background: var(--charcoal); color: var(--cream);
+      font-size: 10px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; padding: 5px 12px;
+    }
+    .card-meta { font-size: 11px; color: var(--muted); letter-spacing: .06em; margin-bottom: 10px; }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 400; line-height: 1.3;
+      color: var(--charcoal); margin-bottom: 10px;
+    }
+    .card-excerpt { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+
+    /* ── QUOTE BLOCK ── */
+    .quote-section {
+      background: var(--sage-dark); padding: 100px 60px;
+      text-align: center;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 52px); font-weight: 300;
+      font-style: italic; color: var(--cream);
+      line-height: 1.4; max-width: 800px; margin: 0 auto 24px;
+    }
+    .quote-attr {
+      font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--sage-light);
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--parchment);
+      padding: 100px 60px; text-align: center;
+    }
+    .newsletter-inner { max-width: 560px; margin: 0 auto; }
+    .newsletter-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 48px); font-weight: 300;
+      line-height: 1.2; margin-bottom: 16px;
+    }
+    .newsletter-sub {
+      font-size: 15px; font-weight: 300; color: var(--muted);
+      margin-bottom: 36px; line-height: 1.7;
+    }
+    .newsletter-form { display: flex; gap: 0; max-width: 440px; margin: 0 auto; }
+    .newsletter-input {
+      flex: 1; padding: 14px 20px;
+      border: 1px solid var(--border); border-right: none;
+      background: var(--white); font-family: 'DM Sans', sans-serif;
+      font-size: 14px; color: var(--charcoal);
+      outline: none;
+    }
+    .newsletter-input::placeholder { color: var(--muted); }
+    .newsletter-btn {
+      padding: 14px 28px; background: var(--charcoal);
+      color: var(--white); border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; font-size: 12px;
+      font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+      transition: background .2s;
+    }
+    .newsletter-btn:hover { background: var(--sage-dark); }
+    .newsletter-note { font-size: 11px; color: var(--muted); margin-top: 14px; }
+
+    /* ── ABOUT STRIP ── */
+    .about-strip {
+      background: var(--white); padding: 80px 60px;
+      display: grid; grid-template-columns: 1fr 2px 1fr 2px 1fr;
+      gap: 0; max-width: 100%; align-items: center;
+    }
+    .divider-v { background: var(--border); height: 80px; align-self: center; }
+    .about-item { padding: 0 60px; text-align: center; }
+    .about-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px; font-weight: 300; color: var(--sage-dark);
+      line-height: 1; margin-bottom: 8px;
+    }
+    .about-label {
+      font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal); padding: 60px 60px 40px;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 32px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 300; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--cream);
+      margin-bottom: 16px;
+    }
+    .footer-desc {
+      font-size: 13px; font-weight: 300; color: rgba(247,243,238,0.5);
+      line-height: 1.8;
+    }
+    .footer-col-title {
+      font-size: 11px; font-weight: 500; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--sage-light);
+      margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a {
+      font-size: 13px; color: rgba(247,243,238,0.5);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--cream); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy {
+      font-size: 12px; color: rgba(247,243,238,0.35); letter-spacing: .06em;
+    }
+    .footer-socials { display: flex; gap: 20px; }
+    .social-link {
+      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(247,243,238,0.5); font-size: 13px; text-decoration: none;
+      transition: all .2s;
+    }
+    .social-link:hover {
+      background: var(--sage-dark); border-color: var(--sage-dark);
+      color: var(--white);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links, .nav-cta { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { height: 300px; }
+      .hero-left { padding: 60px 24px; }
+      .section { padding: 60px 24px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 32px; }
+      .posts-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-strip { grid-template-columns: 1fr; }
+      .divider-v { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-input { border-right: 1px solid var(--border); border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Simply</a>
+    <ul class="nav-links">
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#lifestyle">Lifestyle</a></li>
+      <li><a href="#sustainable">Sustainable</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#newsletter" class="nav-cta">Subscribe</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Intentional Living</p>
+      <h1 class="hero-title">Live with <em>less,</em><br>feel so much more</h1>
+      <p class="hero-sub">A quiet corner of the internet for those who believe that a simpler life is a richer one — slower mornings, lighter possessions, deeper connections.</p>
+      <div class="hero-actions">
+        <a href="#articles" class="btn-primary">Read the blog</a>
+        <a href="#about" class="btn-ghost">Our philosophy →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-placeholder">🌿</div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">12</div>
+        <div class="hero-stat-label">Articles published</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Minimalism</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Sustainable Living</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Slow Mornings</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Intentional Choices</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Less Clutter</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">More Meaning</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Eco Conscious</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Mindful Living</span><span class="marquee-dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Minimalism</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Sustainable Living</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Slow Mornings</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Intentional Choices</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Less Clutter</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">More Meaning</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Eco Conscious</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Mindful Living</span><span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- FEATURED POST -->
+  <section class="featured section" id="articles">
+    <div class="section-label">Featured</div>
+    <div class="featured-inner">
+      <div class="featured-image fade-up">
+        <div style="font-size:100px">🍃</div>
+        <div class="featured-tag">Lifestyle</div>
+      </div>
+      <div class="featured-content fade-up">
+        <div class="post-meta">April 30, 2026 · <span>8 min read</span></div>
+        <h2 class="post-title">The art of decluttering and making space for what matters</h2>
+        <p class="post-excerpt">What if every object in your home had a purpose, a story, or sparked genuine joy? The journey to a curated home isn't about deprivation — it's about making room for what truly matters to you.</p>
+        <a href="#" class="read-more">Read article <span class="read-more-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="grid-section section" id="lifestyle">
+    <div class="section-label">Latest articles</div>
+    <h2 class="section-title">Ideas worth <em>sitting with</em></h2>
+    <div class="posts-grid">
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg1">🌱</div>
+          <span class="card-tag">Sustainable</span>
+        </div>
+        <div class="card-meta">May 28, 2025 · 6 min</div>
+        <h3 class="card-title">A beginner's guide to a zero-waste kitchen</h3>
+        <p class="card-excerpt">Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.</p>
+      </article>
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg2">🧘</div>
+          <span class="card-tag">Mindfulness</span>
+        </div>
+        <div class="card-meta">May 14, 2025 · 5 min</div>
+        <h3 class="card-title">Why slow mornings changed everything for me</h3>
+        <p class="card-excerpt">No phone, no rush. Just tea, light, and thirty minutes of quiet before the world asks anything of you.</p>
+      </article>
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg3">👗</div>
+          <span class="card-tag">Style</span>
+        </div>
+        <div class="card-meta">April 30, 2025 · 7 min</div>
+        <h3 class="card-title">Building a capsule wardrobe from scratch</h3>
+        <p class="card-excerpt">Thirty items. Endless outfits. How I decluttered an overflowing wardrobe and found my personal style in the process.</p>
+      </article>
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg4">🏡</div>
+          <span class="card-tag">Home</span>
+        </div>
+        <div class="card-meta">April 16, 2025 · 9 min</div>
+        <h3 class="card-title">Decluttering room by room — a gentle method</h3>
+        <p class="card-excerpt">Forget the dramatic one-day purge. This room-by-room approach lets you declutter without the overwhelm or the regret.</p>
+      </article>
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg5">🛒</div>
+          <span class="card-tag">Sustainable</span>
+        </div>
+        <div class="card-meta">April 2, 2025 · 5 min</div>
+        <h3 class="card-title">The 30-day rule that stopped impulse buying</h3>
+        <p class="card-excerpt">Wait thirty days before any non-essential purchase. It sounds simple. The results are quietly remarkable.</p>
+      </article>
+
+      <article class="post-card fade-up">
+        <div class="card-image">
+          <div class="card-img-bg bg6">🌍</div>
+          <span class="card-tag">Lifestyle</span>
+        </div>
+        <div class="card-meta">March 20, 2025 · 6 min</div>
+        <h3 class="card-title">Digital minimalism — reclaiming your attention</h3>
+        <p class="card-excerpt">Every notification is a bid for your focus. Here's how to curate your digital life with the same intentionality as your physical one.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section" id="sustainable">
+    <p class="quote-text">"The things you own end up owning you. It's only after you lose everything that you're free to do anything."</p>
+    <p class="quote-attr">— Chuck Palahniuk</p>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip" id="about">
+    <div class="about-item fade-up">
+      <div class="about-num">12</div>
+      <div class="about-label">Articles written</div>
+    </div>
+    <div class="divider-v"></div>
+    <div class="about-item fade-up">
+      <div class="about-num">3</div>
+      <div class="about-label">Core topics</div>
+    </div>
+    <div class="divider-v"></div>
+    <div class="about-item fade-up">
+      <div class="about-num">1</div>
+      <div class="about-label">Simple idea — live well with less</div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-inner fade-up">
+      <div class="section-label" style="justify-content:center">Stay connected</div>
+      <h2 class="newsletter-title">Letters on living <em>simply</em></h2>
+      <p class="newsletter-sub">One thoughtful email every two weeks. No noise, no spam — just ideas on minimalism, sustainability, and the good life.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="your@email.com">
+        <button class="newsletter-btn">Subscribe</button>
+      </div>
+      <p class="newsletter-note">Join 400+ readers · Unsubscribe anytime</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Simply</div>
+        <p class="footer-desc">A blog about minimalism, intentional living, and sustainable choices — written for those who want more from less.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#">Minimalism</a></li>
+          <li><a href="#">Sustainable Living</a></li>
+          <li><a href="#">Mindfulness</a></li>
+          <li><a href="#">Home & Space</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="#">All Articles</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Simply. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">tw</a>
+        <a href="#" class="social-link">ig</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 120);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Newsletter button
+    document.querySelector('.newsletter-btn').addEventListener('click', () => {
+      const input = document.querySelector('.newsletter-input');
+      if (input.value && input.value.includes('@')) {
+        input.value = '';
+        input.placeholder = 'You\'re in! Welcome to Simply ✦';
+        input.style.color = '#7A8C6E';
+      }
+    });
+  </script>
+
+</body>
+</html>
