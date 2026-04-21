@@ -396,6 +396,30 @@
       .newsletter-form { flex-direction: column; }
       .newsletter-input { border-right: 1px solid var(--border); border-bottom: none; }
     }
+    /* Tooltip on card hover */
+.post-card {
+  position: relative;
+}
+.post-card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--charcoal);
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  padding: 6px 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.post-card:hover::after {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
@@ -478,7 +502,7 @@
     <h2 class="section-title">Ideas worth <em>sitting with</em></h2>
     <div class="posts-grid">
 
-      <article class="post-card fade-up" onclick="window.location='zero-waste-kitchen.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='zero-waste-kitchen.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg1">🌱</div>
           <span class="card-tag">Sustainable</span>
@@ -488,7 +512,7 @@
         <p class="card-excerpt">Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.</p>
       </article>
 
-      <article class="post-card fade-up" onclick="window.location='slow-mornings.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='slow-mornings.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg2">🧘</div>
           <span class="card-tag">Mindfulness</span>
@@ -498,7 +522,7 @@
         <p class="card-excerpt">No phone, no rush. Just tea, light, and thirty minutes of quiet before the world asks anything of you.</p>
       </article>
 
-      <article class="post-card fade-up" onclick="window.location='capsule-wardrobe.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='capsule-wardrobe.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg3">👗</div>
           <span class="card-tag">Style</span>
@@ -508,7 +532,7 @@
         <p class="card-excerpt">Thirty items. Endless outfits. How I decluttered an overflowing wardrobe and found my personal style in the process.</p>
       </article>
 
-      <article class="post-card fade-up" onclick="window.location='declutter-room-by-room.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='declutter-room-by-room.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg4">🏡</div>
           <span class="card-tag">Home</span>
@@ -518,7 +542,7 @@
         <p class="card-excerpt">Forget the dramatic one-day purge. This room-by-room approach lets you declutter without the overwhelm or the regret.</p>
       </article>
 
-      <article class="post-card fade-up" onclick="window.location='thirty-day-rule.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='thirty-day-rule.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg5">🛒</div>
           <span class="card-tag">Sustainable</span>
@@ -528,7 +552,7 @@
         <p class="card-excerpt">Wait thirty days before any non-essential purchase. It sounds simple. The results are quietly remarkable.</p>
       </article>
 
-      <article class="post-card fade-up" onclick="window.location='digital-minimalism.html'" style="cursor:pointer">
+      <article class="post-card fade-up" onclick="window.location='digital-minimalism.html'" style="cursor:pointer" data-tooltip="Read article →">
         <div class="card-image">
           <div class="card-img-bg bg6">🌍</div>
           <span class="card-tag">Lifestyle</span>
