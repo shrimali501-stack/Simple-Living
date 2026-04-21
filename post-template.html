@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TEMPLATE INSTRUCTIONS — change these 5 lines per post:
+       1. <title>       — browser tab title
+       2. meta description — for Google search snippet (150 chars)
+       3. meta keywords    — comma separated keywords
+       4. og:title         — social share title
+       5. og:description   — social share description
+  ════════════════════════════════════════════════════════════ -->
+  <title>POST TITLE HERE · Simply</title>
+  <meta name="description" content="POST DESCRIPTION HERE — keep under 150 characters for best Google display.">
+  <meta name="keywords" content="keyword1, keyword2, minimalism, sustainable living">
+  <meta property="og:title" content="POST TITLE HERE">
+  <meta property="og:description" content="POST DESCRIPTION HERE">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #F7F3EE;
+      --parchment:  #EDE8DF;
+      --sage:       #7A8C6E;
+      --sage-light: #B5C4A8;
+      --sage-dark:  #4A5E3E;
+      --terracotta: #C47B5A;
+      --charcoal:   #2C2C28;
+      --muted:      #7A7A72;
+      --border:     #D8D0C4;
+      --white:      #FDFCFA;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(247, 243, 238, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; font-weight: 300; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--charcoal); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 12px; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-back {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--sage-dark); }
+
+    /* ── HERO ── */
+    .post-hero {
+      padding-top: 80px;
+      background: var(--parchment);
+      border-bottom: 1px solid var(--border);
+    }
+    .post-hero-inner {
+      max-width: 760px; margin: 0 auto;
+      padding: 80px 40px 60px;
+    }
+    .post-category {
+      display: inline-block;
+      font-size: 11px; font-weight: 500; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 300; line-height: 1.1;
+      color: var(--charcoal); margin-bottom: 24px;
+    }
+    .post-title em { font-style: italic; color: var(--sage-dark); }
+    .post-subtitle {
+      font-size: 18px; font-weight: 300; color: var(--muted);
+      line-height: 1.7; margin-bottom: 32px; max-width: 600px;
+    }
+    .post-meta {
+      display: flex; align-items: center; gap: 20px;
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
+    .meta-item {
+      font-size: 12px; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .meta-sep { color: var(--border); }
+
+    /* ── COVER IMAGE ── */
+    .post-cover {
+      width: 100%; max-height: 480px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 120px;
+      /* Replace background with an actual image if you have one:
+         background: url('images/post-image.jpg') center/cover no-repeat; */
+    }
+
+    /* ── ARTICLE BODY ── */
+    .post-body {
+      max-width: 680px; margin: 0 auto;
+      padding: 72px 40px 100px;
+    }
+
+    /* Typography for article content */
+    .post-body p {
+      font-size: 17px; font-weight: 300;
+      color: var(--charcoal); line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 400;
+      color: var(--charcoal); margin: 56px 0 20px;
+      line-height: 1.2;
+    }
+    .post-body h2 em { font-style: italic; color: var(--sage-dark); }
+    .post-body h3 {
+      font-size: 16px; font-weight: 500;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: var(--sage-dark); margin: 40px 0 14px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 28px 24px;
+    }
+    .post-body li {
+      font-size: 17px; font-weight: 300;
+      color: var(--charcoal); line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    .post-body strong { font-weight: 500; }
+    .post-body em { font-style: italic; color: var(--sage-dark); }
+    .post-body a {
+      color: var(--sage-dark); text-decoration: none;
+      border-bottom: 1px solid var(--sage-light);
+      transition: border-color .2s;
+    }
+    .post-body a:hover { border-color: var(--sage-dark); }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px 40px;
+      border-left: 3px solid var(--terracotta);
+      background: var(--parchment);
+    }
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px !important; font-weight: 300;
+      font-style: italic; color: var(--charcoal);
+      line-height: 1.4 !important; margin: 0 !important;
+    }
+
+    /* Tip box */
+    .tip-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--sage-dark);
+      padding: 24px 28px; margin: 40px 0;
+    }
+    .tip-box-label {
+      font-size: 11px; font-weight: 500; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--sage-dark);
+      margin-bottom: 10px;
+    }
+    .tip-box p { margin: 0 !important; font-size: 15px !important; }
+
+    /* Divider */
+    .post-divider {
+      width: 60px; height: 1px; background: var(--terracotta);
+      margin: 48px 0;
+    }
+
+    /* ── RELATED POSTS ── */
+    .related {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 72px 60px;
+    }
+    .related-label {
+      font-size: 11px; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 32px; display: flex; align-items: center; gap: 14px;
+    }
+    .related-label::after {
+      content: ''; flex: 1; max-width: 60px; height: 1px;
+      background: var(--terracotta);
+    }
+    .related-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px; max-width: 1080px;
+    }
+    .related-card { text-decoration: none; display: block; }
+    .related-img {
+      aspect-ratio: 3/2; margin-bottom: 16px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; transition: transform .4s ease;
+    }
+    .related-card:hover .related-img { transform: scale(1.03); }
+    .related-tag {
+      font-size: 10px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 8px; display: block;
+    }
+    .related-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 400; line-height: 1.3;
+      color: var(--charcoal);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal); padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 300; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--cream);
+      text-decoration: none;
+    }
+    .footer-copy {
+      font-size: 12px; color: rgba(247,243,238,0.4); letter-spacing: .06em;
+    }
+    .footer-back {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(247,243,238,0.5);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-back:hover { color: var(--cream); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .post-hero-inner { padding: 60px 24px 40px; }
+      .post-body { padding: 48px 24px 72px; }
+      .related { padding: 48px 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .pull-quote { padding: 24px; }
+    }
+
+    /* ── FADE IN ── */
+    .fade-up {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Simply</a>
+    <ul class="nav-links">
+      <li><a href="index.html#articles">Articles</a></li>
+      <li><a href="index.html#lifestyle">Lifestyle</a></li>
+      <li><a href="index.html#sustainable">Sustainable</a></li>
+    </ul>
+    <a href="index.html" class="nav-back">← Back to home</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <span class="post-category">CATEGORY HERE</span>
+      <h1 class="post-title">POST TITLE <em>HERE</em></h1>
+      <p class="post-subtitle">A one or two sentence intro that draws the reader in and summarises what this post is about.</p>
+      <div class="post-meta">
+        <span class="meta-item">Month DD, YYYY</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-item">X min read</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-item">By Astha</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- COVER IMAGE / EMOJI -->
+  <div class="post-cover" style="background: linear-gradient(135deg, #C9D4B8 0%, #A8B898 100%); min-height: 300px;">
+    🌿
+    <!-- To use a real image instead, replace this entire div with:
+    <img src="images/your-image.jpg" alt="description" style="width:100%; max-height:480px; object-fit:cover;">
+    -->
+  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <article class="post-body fade-up">
+
+    <p>Your opening paragraph goes here. This is where you hook the reader — share a personal story, a surprising fact, or a bold statement that makes them want to keep reading.</p>
+
+    <h2>Your First Section <em>Heading</em></h2>
+
+    <p>Body text goes here. Write naturally, as if you're having a conversation with a friend. Short paragraphs of 3–5 sentences are easier to read than long walls of text.</p>
+
+    <div class="pull-quote">
+      <p>"A memorable quote or key insight from your article goes here — something that captures the heart of what you're saying."</p>
+    </div>
+
+    <p>Continue your article here. You can have as many sections and paragraphs as you need.</p>
+
+    <h2>Your Second Section</h2>
+
+    <p>More content here. Use lists when you have 3 or more actionable items:</p>
+
+    <ul>
+      <li>First actionable tip or point</li>
+      <li>Second tip that follows naturally</li>
+      <li>Third tip to complete the thought</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-box-label">Practical tip</div>
+      <p>Use tip boxes to highlight the single most actionable takeaway from a section — something the reader can do today.</p>
+    </div>
+
+    <div class="post-divider"></div>
+
+    <p>Your closing paragraph — bring the piece full circle. Reference something from the opening, leave the reader with a clear thought or gentle challenge.</p>
+
+  </article>
+
+  <!-- RELATED POSTS — update href and content for each post -->
+  <section class="related">
+    <div class="related-label">Keep reading</div>
+    <div class="related-grid">
+      <a href="zero-waste-kitchen.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #C9D4B8, #A8B898);">🌱</div>
+        <span class="related-tag">Sustainable</span>
+        <div class="related-title">A beginner's guide to a zero-waste kitchen</div>
+      </a>
+      <a href="slow-mornings.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #C4B8A8, #A8C4B8);">🧘</div>
+        <span class="related-tag">Mindfulness</span>
+        <div class="related-title">Why slow mornings changed everything for me</div>
+      </a>
+      <a href="capsule-wardrobe.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #B8C4A0, #C8B0A0);">👗</div>
+        <span class="related-tag">Style</span>
+        <div class="related-title">Building a capsule wardrobe from scratch</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo">Simply</a>
+    <p class="footer-copy">© 2025 Simply. All rights reserved.</p>
+    <a href="index.html" class="footer-back">↑ Back to top</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

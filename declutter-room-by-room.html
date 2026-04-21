@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
+    html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(247,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--charcoal);text-decoration:none}
+    .nav-links{display:flex;gap:36px;list-style:none}.nav-links a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--sage-dark)}
+    .nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}.nav-back:hover{color:var(--sage-dark)}
+    .post-hero{padding-top:80px;background:var(--parchment);border-bottom:1px solid var(--border)}.post-hero-inner{max-width:760px;margin:0 auto;padding:80px 40px 60px}
+    .post-category{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:24px}.post-title em{font-style:italic;color:var(--sage-dark)}
+    .post-subtitle{font-size:18px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:600px}
+    .post-meta{display:flex;align-items:center;gap:20px;padding-top:24px;border-top:1px solid var(--border)}.meta-item{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.meta-sep{color:var(--border)}
+    .post-cover{width:100%;min-height:320px;display:flex;align-items:center;justify-content:center;font-size:120px}
+    .post-body{max-width:680px;margin:0 auto;padding:72px 40px 100px}
+    .post-body p{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.85;margin-bottom:28px}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--charcoal);margin:56px 0 20px;line-height:1.2}.post-body h2 em{font-style:italic;color:var(--sage-dark)}
+    .post-body h3{font-size:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-dark);margin:40px 0 14px}
+    .post-body ul,.post-body ol{margin:0 0 28px 24px}.post-body li{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.8;margin-bottom:10px}
+    .post-body strong{font-weight:500}.post-body em{font-style:italic;color:var(--sage-dark)}
+    .pull-quote{margin:48px 0;padding:32px 40px;border-left:3px solid var(--terracotta);background:var(--parchment)}.pull-quote p{font-family:'Cormorant Garamond',serif;font-size:26px!important;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.4!important;margin:0!important}
+    .tip-box{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--sage-dark);padding:24px 28px;margin:40px 0}.tip-box-label{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:10px}.tip-box p{margin:0!important;font-size:15px!important}
+    .post-divider{width:60px;height:1px;background:var(--terracotta);margin:48px 0}
+    .related{background:var(--white);border-top:1px solid var(--border);padding:72px 60px}.related-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:32px;display:flex;align-items:center;gap:14px}.related-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--terracotta)}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1080px}.related-card{text-decoration:none;display:block}.related-img{aspect-ratio:3/2;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;transition:transform .4s}.related-card:hover .related-img{transform:scale(1.03)}.related-tag{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px;display:block}.related-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;line-height:1.3;color:var(--charcoal)}
+    footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content:space-between;align-items:center}.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);text-decoration:none}.footer-copy{font-size:12px;color:rgba(247,243,238,0.4)}.footer-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,0.5);text-decoration:none;transition:color .2s}.footer-back:hover{color:var(--cream)}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.post-hero-inner{padding:60px 24px 40px}.post-body{padding:48px 24px 72px}.related{padding:48px 24px}.related-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:16px;text-align:center}}
+  </style>
+<title>Decluttering Room by Room — A Gentle Method · Simply</title>
+<meta name="description" content="Forget the dramatic one-day purge. This room-by-room approach lets you declutter without the overwhelm or the regret.">
+<meta name="keywords" content="decluttering, room by room declutter, minimalist home, tidying up, how to declutter">
+</head>
+<body>
+  <nav><a href="index.html" class="nav-logo">Simply</a><ul class="nav-links"><li><a href="index.html#articles">Articles</a></li><li><a href="index.html#lifestyle">Lifestyle</a></li><li><a href="index.html#sustainable">Sustainable</a></li></ul><a href="index.html" class="nav-back">← Back to home</a></nav>
+  <header class="post-hero"><div class="post-hero-inner"><span class="post-category">Home</span><h1 class="post-title">Decluttering room by room — <em>a gentle method</em></h1><p class="post-subtitle">Forget the dramatic one-day purge. This room-by-room approach lets you declutter without the overwhelm or the regret.</p><div class="post-meta"><span class="meta-item">April 16, 2025</span><span class="meta-sep">·</span><span class="meta-item">9 min read</span><span class="meta-sep">·</span><span class="meta-item">By Astha</span></div></div></header>
+  <div class="post-cover" style="background:linear-gradient(135deg,#C0C8A8,#B0A898);">🏡</div>
+  <article class="post-body fade-up">
+    <p>Every January, the decluttering content floods in. Dramatic before-and-afters. The promise of transformation in a single weekend. The instruction to take everything out, put it all in a pile, and only keep what sparks joy. For some people, this works brilliantly. For many others — myself included for years — it creates a different kind of chaos, then shame when the pile returns within months.</p>
+    <p>The gentler alternative is slower, quieter, and in my experience, far more permanent. One room. One category. One decision at a time.</p>
+    <h2>Why slow decluttering <em>works better</em></h2>
+    <p>The all-at-once method works against how our brains process decisions. Decision fatigue is real — after making a certain number of choices, our ability to make good ones deteriorates sharply. Trying to decide the fate of every object you own in a single session almost guarantees poor decisions at the end, which means either keeping things you should release or releasing things you'll regret.</p>
+    <div class="pull-quote"><p>"Decluttering isn't an event. It's a practice — something you return to, season after season, as you and your life change."</p></div>
+    <h2>The room-by-room method</h2>
+    <h3>Choose one room and commit to it</h3>
+    <p>Start with the room that bothers you most — the one that drains your energy when you walk in. Don't split your attention across multiple spaces. One room, fully finished, gives you both clarity and momentum.</p>
+    <h3>Work in sessions, not marathons</h3>
+    <p>Thirty to forty-five minutes is ideal. Set a timer. When it goes off, stop — even if you're mid-category. This keeps the process feeling manageable rather than punishing, and means you can do it on a Tuesday evening rather than waiting for a free weekend that may never come.</p>
+    <h3>The three-box system</h3>
+    <p>Keep three boxes or bags visible as you work:</p>
+    <ul>
+      <li><strong>Keep</strong> — things you actively use or genuinely love</li>
+      <li><strong>Donate/sell</strong> — things in good condition that could serve someone else</li>
+      <li><strong>Let go</strong> — things that are worn out, broken, or no longer useful to anyone</li>
+    </ul>
+    <p>The critical rule: the donate box leaves your home within 48 hours of filling it. Not next week. Not when you get around to it. Within 48 hours. This prevents the common pattern of boxes sitting in hallways for months, quietly returning items to circulation.</p>
+    <div class="tip-box"><div class="tip-box-label">For the hard decisions</div><p>If you genuinely cannot decide about an item, box it with a date written on the outside — three months from now. If you haven't needed or missed it by that date, donate it without reopening the box. You've already made the decision.</p></div>
+    <h2>The order that works best</h2>
+    <p>Start with low-emotional-charge areas: the bathroom cabinet, the kitchen junk drawer, the hall cupboard. Build your decluttering muscle before you reach the harder spaces — the wardrobe, the sentimental items, the boxes from your childhood home that have moved with you three times without ever being opened.</p>
+    <div class="post-divider"></div>
+    <p>Six months after starting this process room by room, my home feels genuinely different. Not perfectly minimal — I'm not interested in that. But considered. Everything in it is there because I chose it, not because I haven't gotten around to dealing with it yet. That quiet sense of intention, carried through every room, is the real reward.</p>
+  </article>
+  <section class="related"><div class="related-label">Keep reading</div><div class="related-grid"><a href="capsule-wardrobe.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#B8C4A0,#C8B0A0);">👗</div><span class="related-tag">Style</span><div class="related-title">Building a capsule wardrobe from scratch</div></a><a href="thirty-day-rule.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#C8B8A0,#A8B8A8);">🛒</div><span class="related-tag">Sustainable</span><div class="related-title">The 30-day rule that stopped impulse buying</div></a><a href="slow-mornings.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#C4B8A8,#A8C4B8);">🧘</div><span class="related-tag">Mindfulness</span><div class="related-title">Why slow mornings changed everything for me</div></a></div></section>
+  <footer><a href="index.html" class="footer-logo">Simply</a><p class="footer-copy">© 2025 Simply. All rights reserved.</p><a href="index.html" class="footer-back">↑ Back to home</a></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));</script>
+</body></html>

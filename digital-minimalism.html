@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
+    html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(247,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--charcoal);text-decoration:none}
+    .nav-links{display:flex;gap:36px;list-style:none}.nav-links a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--sage-dark)}
+    .nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}.nav-back:hover{color:var(--sage-dark)}
+    .post-hero{padding-top:80px;background:var(--parchment);border-bottom:1px solid var(--border)}.post-hero-inner{max-width:760px;margin:0 auto;padding:80px 40px 60px}
+    .post-category{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:24px}.post-title em{font-style:italic;color:var(--sage-dark)}
+    .post-subtitle{font-size:18px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:600px}
+    .post-meta{display:flex;align-items:center;gap:20px;padding-top:24px;border-top:1px solid var(--border)}.meta-item{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.meta-sep{color:var(--border)}
+    .post-cover{width:100%;min-height:320px;display:flex;align-items:center;justify-content:center;font-size:120px}
+    .post-body{max-width:680px;margin:0 auto;padding:72px 40px 100px}
+    .post-body p{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.85;margin-bottom:28px}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--charcoal);margin:56px 0 20px;line-height:1.2}.post-body h2 em{font-style:italic;color:var(--sage-dark)}
+    .post-body h3{font-size:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-dark);margin:40px 0 14px}
+    .post-body ul,.post-body ol{margin:0 0 28px 24px}.post-body li{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.8;margin-bottom:10px}
+    .post-body strong{font-weight:500}.post-body em{font-style:italic;color:var(--sage-dark)}
+    .pull-quote{margin:48px 0;padding:32px 40px;border-left:3px solid var(--terracotta);background:var(--parchment)}.pull-quote p{font-family:'Cormorant Garamond',serif;font-size:26px!important;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.4!important;margin:0!important}
+    .tip-box{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--sage-dark);padding:24px 28px;margin:40px 0}.tip-box-label{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:10px}.tip-box p{margin:0!important;font-size:15px!important}
+    .post-divider{width:60px;height:1px;background:var(--terracotta);margin:48px 0}
+    .related{background:var(--white);border-top:1px solid var(--border);padding:72px 60px}.related-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:32px;display:flex;align-items:center;gap:14px}.related-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--terracotta)}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1080px}.related-card{text-decoration:none;display:block}.related-img{aspect-ratio:3/2;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;transition:transform .4s}.related-card:hover .related-img{transform:scale(1.03)}.related-tag{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px;display:block}.related-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;line-height:1.3;color:var(--charcoal)}
+    footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content:space-between;align-items:center}.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);text-decoration:none}.footer-copy{font-size:12px;color:rgba(247,243,238,0.4)}.footer-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,0.5);text-decoration:none;transition:color .2s}.footer-back:hover{color:var(--cream)}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.post-hero-inner{padding:60px 24px 40px}.post-body{padding:48px 24px 72px}.related{padding:48px 24px}.related-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:16px;text-align:center}}
+  </style>
+<title>Digital Minimalism — Reclaiming Your Attention · Simply</title>
+<meta name="description" content="Every notification is a bid for your focus. Here's how to curate your digital life with the same intentionality as your physical one.">
+<meta name="keywords" content="digital minimalism, reclaim attention, screen time, notifications, mindful technology use">
+</head>
+<body>
+  <nav><a href="index.html" class="nav-logo">Simply</a><ul class="nav-links"><li><a href="index.html#articles">Articles</a></li><li><a href="index.html#lifestyle">Lifestyle</a></li><li><a href="index.html#sustainable">Sustainable</a></li></ul><a href="index.html" class="nav-back">← Back to home</a></nav>
+  <header class="post-hero"><div class="post-hero-inner"><span class="post-category">Lifestyle</span><h1 class="post-title">Digital minimalism — <em>reclaiming your attention</em></h1><p class="post-subtitle">Every notification is a bid for your focus. Here's how to curate your digital life with the same intentionality as your physical one.</p><div class="post-meta"><span class="meta-item">March 20, 2025</span><span class="meta-sep">·</span><span class="meta-item">6 min read</span><span class="meta-sep">·</span><span class="meta-item">By Astha</span></div></div></header>
+  <div class="post-cover" style="background:linear-gradient(135deg,#B8C0A0,#C4A898);">🌍</div>
+  <article class="post-body fade-up">
+    <p>We've spent years decluttering our homes, curating our wardrobes, simplifying our diets. We've thought carefully about what objects deserve space in our physical lives. And then we hand the most intimate, continuous access to ourselves — our attention, our emotional bandwidth, our idle moments — to apps designed by teams of engineers whose job is to make sure we never stop scrolling.</p>
+    <p>Digital minimalism applies the same thinking we bring to physical possessions to our digital lives. Not digital abstinence. Not a dramatic phone-smashing moment. Simply: what technology genuinely adds value to my life, and what am I using out of habit, boredom, or the friction of stopping?</p>
+    <h2>Attention is the <em>real currency</em></h2>
+    <p>Every notification, every red badge, every algorithmically-timed nudge is a bid for your attention. The business model of most free apps depends on capturing as much of your attention as possible and selling access to it to advertisers. This isn't conspiracy — it's simply what the incentive structure produces.</p>
+    <div class="pull-quote"><p>"You are not the customer of these platforms. You are the product. Your attention is what is being sold."</p></div>
+    <p>Understanding this doesn't require dramatic action. It requires awareness — and then the quiet, deliberate choice to be more selective about where you give your focus.</p>
+    <h2>Practical steps toward digital minimalism</h2>
+    <h3>Audit your apps</h3>
+    <p>Go through every app on your phone and ask two questions: does this add genuine value to my life? And: does it take more than it gives? Social media apps in particular tend to be high-take, low-give for many people once the initial dopamine novelty wears off. Delete or move anything that fails this test to a folder that requires deliberate navigation — friction is surprisingly powerful.</p>
+    <h3>Turn off almost all notifications</h3>
+    <p>Most notifications are not urgent. Almost all of them are interruptive. A useful experiment: turn off all non-essential notifications for one week. Notice how much calmer your phone — and you — become. Then turn back on only those that you genuinely missed.</p>
+    <ul>
+      <li>Keep: calls, messages from people you care about, calendar reminders</li>
+      <li>Remove: social media, news, email, shopping, most apps</li>
+    </ul>
+    <div class="tip-box"><div class="tip-box-label">The one-screen rule</div><p>Move all social media apps to a folder on your second screen, behind a deliberate tap. This tiny piece of friction — having to actively choose to open them — reduces mindless opening by more than most people expect.</p></div>
+    <h3>Create phone-free zones</h3>
+    <p>The bedroom and the dining table are the highest-value places to start. The bedroom because the phone in that space disrupts sleep and colonises the first and last minutes of your day. The dining table because meals have an almost universal human importance as moments of connection — with others or with yourself — that deserve protection from distraction.</p>
+    <h2>What returns when you take back your attention</h2>
+    <p>People who practice digital minimalism consistently report the same experiences: boredom at first, then creativity. Discomfort at first, then presence. The feeling of having more time — not because they gained hours but because the hours they have are no longer fractured into tiny, attention-depleted pieces.</p>
+    <div class="post-divider"></div>
+    <p>Your attention is the most valuable thing you have. It shapes what you think about, what you care about, who you become. Tending to it — protecting it from the hundreds of small, engineered thefts that happen across a normal day — is one of the most genuinely radical acts of self-care available to us. And it doesn't cost anything except the willingness to notice.</p>
+  </article>
+  <section class="related"><div class="related-label">Keep reading</div><div class="related-grid"><a href="slow-mornings.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#C4B8A8,#A8C4B8);">🧘</div><span class="related-tag">Mindfulness</span><div class="related-title">Why slow mornings changed everything for me</div></a><a href="thirty-day-rule.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#C8B8A0,#A8B8A8);">🛒</div><span class="related-tag">Sustainable</span><div class="related-title">The 30-day rule that stopped impulse buying</div></a><a href="declutter-room-by-room.html" class="related-card"><div class="related-img" style="background:linear-gradient(135deg,#C0C8A8,#B0A898);">🏡</div><span class="related-tag">Home</span><div class="related-title">Decluttering room by room — a gentle method</div></a></div></section>
+  <footer><a href="index.html" class="footer-logo">Simply</a><p class="footer-copy">© 2025 Simply. All rights reserved.</p><a href="index.html" class="footer-back">↑ Back to home</a></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));</script>
+</body></html>

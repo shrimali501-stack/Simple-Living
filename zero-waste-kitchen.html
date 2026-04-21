@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Beginner's Guide to a Zero-Waste Kitchen · Simply</title>
+  <meta name="description" content="Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.">
+  <meta name="keywords" content="zero waste kitchen, sustainable kitchen, eco friendly cooking, reduce plastic, composting">
+  <meta property="og:title" content="A Beginner's Guide to a Zero-Waste Kitchen">
+  <meta property="og:description" content="Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --cream: #F7F3EE; --parchment: #EDE8DF; --sage: #7A8C6E; --sage-light: #B5C4A8; --sage-dark: #4A5E3E; --terracotta: #C47B5A; --charcoal: #2C2C28; --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 60px; background: rgba(247,243,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; letter-spacing: .12em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-back { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .nav-back:hover { color: var(--sage-dark); }
+    .post-hero { padding-top: 80px; background: var(--parchment); border-bottom: 1px solid var(--border); }
+    .post-hero-inner { max-width: 760px; margin: 0 auto; padding: 80px 40px 60px; }
+    .post-category { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; }
+    .post-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 24px; }
+    .post-title em { font-style: italic; color: var(--sage-dark); }
+    .post-subtitle { font-size: 18px; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 32px; max-width: 600px; }
+    .post-meta { display: flex; align-items: center; gap: 20px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .meta-item { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .meta-sep { color: var(--border); }
+    .post-cover { width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; font-size: 120px; }
+    .post-body { max-width: 680px; margin: 0 auto; padding: 72px 40px 100px; }
+    .post-body p { font-size: 17px; font-weight: 300; color: var(--charcoal); line-height: 1.85; margin-bottom: 28px; }
+    .post-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: var(--charcoal); margin: 56px 0 20px; line-height: 1.2; }
+    .post-body h2 em { font-style: italic; color: var(--sage-dark); }
+    .post-body h3 { font-size: 16px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--sage-dark); margin: 40px 0 14px; }
+    .post-body ul, .post-body ol { margin: 0 0 28px 24px; }
+    .post-body li { font-size: 17px; font-weight: 300; color: var(--charcoal); line-height: 1.8; margin-bottom: 10px; }
+    .post-body strong { font-weight: 500; }
+    .post-body em { font-style: italic; color: var(--sage-dark); }
+    .pull-quote { margin: 48px 0; padding: 32px 40px; border-left: 3px solid var(--terracotta); background: var(--parchment); }
+    .pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 26px !important; font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.4 !important; margin: 0 !important; }
+    .tip-box { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--sage-dark); padding: 24px 28px; margin: 40px 0; }
+    .tip-box-label { font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 10px; }
+    .tip-box p { margin: 0 !important; font-size: 15px !important; }
+    .post-divider { width: 60px; height: 1px; background: var(--terracotta); margin: 48px 0; }
+    .related { background: var(--white); border-top: 1px solid var(--border); padding: 72px 60px; }
+    .related-label { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 32px; display: flex; align-items: center; gap: 14px; }
+    .related-label::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--terracotta); }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1080px; }
+    .related-card { text-decoration: none; display: block; }
+    .related-img { aspect-ratio: 3/2; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 48px; overflow: hidden; transition: transform .4s; }
+    .related-card:hover .related-img { transform: scale(1.03); }
+    .related-tag { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 8px; display: block; }
+    .related-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; line-height: 1.3; color: var(--charcoal); }
+    footer { background: var(--charcoal); padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(247,243,238,0.4); }
+    .footer-back { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(247,243,238,0.5); text-decoration: none; transition: color .2s; }
+    .footer-back:hover { color: var(--cream); }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } .post-hero-inner { padding: 60px 24px 40px; } .post-body { padding: 48px 24px 72px; } .related { padding: 48px 24px; } .related-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 16px; text-align: center; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Simply</a>
+    <ul class="nav-links">
+      <li><a href="index.html#articles">Articles</a></li>
+      <li><a href="index.html#lifestyle">Lifestyle</a></li>
+      <li><a href="index.html#sustainable">Sustainable</a></li>
+    </ul>
+    <a href="index.html" class="nav-back">← Back to home</a>
+  </nav>
+
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <span class="post-category">Sustainable</span>
+      <h1 class="post-title">A beginner's guide to a <em>zero-waste kitchen</em></h1>
+      <p class="post-subtitle">Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.</p>
+      <div class="post-meta">
+        <span class="meta-item">May 28, 2025</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-item">6 min read</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-item">By Astha</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-cover" style="background: linear-gradient(135deg, #C9D4B8 0%, #A8C4A0 100%);">🌱</div>
+
+  <article class="post-body fade-up">
+    <p>It started with a jar. I was standing in my kitchen, looking at the overflowing bin after a single week of cooking, and I felt a quiet but persistent unease. Not guilt, exactly — more like a low hum of awareness that something didn't add up. I was someone who cared about the planet, yet my kitchen told a different story every Monday morning.</p>
+
+    <p>The zero-waste kitchen isn't about perfection. It's not about having a spotless pantry of matching glass jars or producing just one mason jar of landfill waste per year. It's about making small, considered swaps — and then letting those become habits so natural you barely notice them.</p>
+
+    <h2>Start with what you <em>throw away most</em></h2>
+
+    <p>Before buying anything new, spend one week simply observing. What fills your bin most quickly? For most people it's food packaging — cling film, plastic bags, single-use containers. For others it's food waste itself — half-used vegetables, wilted herbs, forgotten leftovers. Your personal waste profile tells you exactly where to start.</p>
+
+    <div class="pull-quote">
+      <p>"The most sustainable kitchen isn't the one with the most eco-products — it's the one that wastes the least."</p>
+    </div>
+
+    <h2>The swaps that actually matter</h2>
+
+    <h3>Replace before you buy</h3>
+    <p>The most common zero-waste mistake is rushing out to replace everything at once. This defeats the purpose — producing waste to reduce waste. Instead, use up or wear out what you already have, then replace it with something better when the time comes.</p>
+
+    <ul>
+      <li><strong>Cling film</strong> → beeswax wraps or a simple plate on top of a bowl</li>
+      <li><strong>Plastic bags</strong> → reusable cotton produce bags (works for groceries too)</li>
+      <li><strong>Disposable sponges</strong> → a wooden brush or loofah that composts at end of life</li>
+      <li><strong>Plastic bottles of cleaning product</strong> → concentrated tablets dissolved in a reused bottle</li>
+      <li><strong>Paper towels</strong> → a stack of cut-up old t-shirts or proper cloth napkins</li>
+    </ul>
+
+    <h2>Bulk buying changes <em>everything</em></h2>
+
+    <p>If there is one habit that will have the greatest impact on kitchen waste, it's buying in bulk. Grains, lentils, nuts, spices — when you bring your own containers to a bulk store, you eliminate packaging entirely at the source. The food is often fresher and cheaper too.</p>
+
+    <p>No bulk store nearby? Start by buying the largest size available of things you use regularly. A 1kg bag of oats produces the same amount of packaging as a 500g bag — but feeds you twice as long.</p>
+
+    <div class="tip-box">
+      <div class="tip-box-label">Start here today</div>
+      <p>Put a small bowl on your kitchen counter for vegetable scraps — onion peels, carrot tops, celery ends. After a week, simmer them in water for 30 minutes. You just made free, zero-waste vegetable stock. Freeze it in ice cube trays for easy use.</p>
+    </div>
+
+    <h2>Composting — the final loop</h2>
+
+    <p>Even the most careful zero-waste kitchen generates food scraps. Composting closes the loop — turning what would be landfill into rich soil for plants. If you have outdoor space, a simple compost bin works. In a flat, a small bokashi bin ferments scraps in a sealed container with no smell.</p>
+
+    <p>Many cities now offer food waste collection too — check your local council. The barrier to composting is usually smaller than people imagine.</p>
+
+    <div class="post-divider"></div>
+
+    <p>The zero-waste kitchen isn't a destination. It's a direction. Every jar you refill, every scrap you compost, every disposable item you replace with something durable — it all adds up quietly and surely. You don't have to do everything. You just have to start somewhere, and then keep going.</p>
+  </article>
+
+  <section class="related">
+    <div class="related-label">Keep reading</div>
+    <div class="related-grid">
+      <a href="slow-mornings.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #C4B8A8, #A8C4B8);">🧘</div>
+        <span class="related-tag">Mindfulness</span>
+        <div class="related-title">Why slow mornings changed everything for me</div>
+      </a>
+      <a href="thirty-day-rule.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #C8B8A0, #A8B8A8);">🛒</div>
+        <span class="related-tag">Sustainable</span>
+        <div class="related-title">The 30-day rule that stopped impulse buying</div>
+      </a>
+      <a href="declutter-room-by-room.html" class="related-card">
+        <div class="related-img" style="background: linear-gradient(135deg, #C0C8A8, #B0A898);">🏡</div>
+        <span class="related-tag">Home</span>
+        <div class="related-title">Decluttering room by room — a gentle method</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Simply</a>
+    <p class="footer-copy">© 2025 Simply. All rights reserved.</p>
+    <a href="index.html" class="footer-back">↑ Back to home</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
