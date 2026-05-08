@@ -68,7 +68,9 @@
     .footer-back:hover { color: var(--cream); }
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } .post-hero-inner { padding: 60px 24px 40px; } .post-body { padding: 48px 24px 72px; } .related { padding: 48px 24px; } .related-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 16px; text-align: center; } }
+    @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } .post-hero-inner { padding: 60px 24px 40px; } .post-body { padding: 48px 24px 72px; } .related { padding: 48px 24px; } .related-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 16px; text-align: center; } 
+  .post-cover img { width: 100% !important; }}
+  
   </style>
 </head>
 <body>
@@ -97,7 +99,16 @@
     </div>
   </header>
 
-  <div class="post-cover" style="background: linear-gradient(135deg, #C9D4B8 0%, #A8C4A0 100%);">🌱</div>
+  <div class="post-cover" style="padding:40px 0;background:var(--parchment);display:flex;justify-content:center;">
+  <img 
+    src="zero-waste-kitchen.webp"
+    alt="Zero waste kitchen setup with compost bin, fresh herbs and vegetable scraps"
+    width="1600"
+    height="900"
+    fetchpriority="high"
+    style="width:60%;height:500px;object-fit:cover;display:block;border-radius:2px;"
+  >
+</div>
 
   <article class="post-body fade-up">
     <p>It started with a jar. I was standing in my kitchen, looking at the overflowing bin after a single week of cooking, and I felt a quiet but persistent unease. Not guilt, exactly — more like a low hum of awareness that something didn't add up. I was someone who cared about the planet, yet my kitchen told a different story every Monday morning.</p>
