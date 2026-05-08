@@ -3,42 +3,64 @@
 
   <url>
     <loc>https://www.sukaraliving.in/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/about.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/slow-mornings.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/capsule-wardrobe.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/decluttering.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/zero-waste-kitchen.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/digital-minimalism.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sukaraliving.in/thirty-day-rule.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/art-of-organizing.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
