@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="sl-favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="sl-favicon.png">
+  <link rel="apple-touch-icon" href="sl-favicon.png">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(247,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-logo{text-decoration:none}
+    .nav-links{display:flex;gap:36px;list-style:none}
+    .nav-links a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--sage-dark)}
+    .nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-back:hover{color:var(--sage-dark)}
+
+    /* HERO */
+    .about-hero{padding-top:80px;background:var(--parchment);border-bottom:1px solid var(--border)}
+    .about-hero-inner{max-width:760px;margin:0 auto;padding:100px 40px 80px}
+    .about-eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px;display:block}
+    .about-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,76px);font-weight:300;line-height:1.05;color:var(--charcoal);margin-bottom:32px}
+    .about-hero-title em{font-style:italic;color:var(--sage-dark)}
+    .about-hero-sub{font-size:19px;font-weight:300;color:var(--muted);line-height:1.75;max-width:560px}
+
+    /* COVER BAND */
+    .about-cover{width:100%;min-height:280px;display:flex;align-items:center;justify-content:center;font-size:110px;background:linear-gradient(135deg,#C8D4B4,#D4C4A8)}
+
+    /* BODY */
+    .about-body{max-width:680px;margin:0 auto;padding:80px 40px 100px}
+    .about-body p{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.9;margin-bottom:28px}
+    .about-body strong{font-weight:500}
+    .about-body em{font-style:italic;color:var(--sage-dark)}
+    .about-body h2{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--charcoal);margin:60px 0 20px;line-height:1.2}
+    .about-body h2 em{font-style:italic;color:var(--sage-dark)}
+
+    /* PULL QUOTE */
+    .pull-quote{margin:48px 0;padding:32px 40px;border-left:3px solid var(--terracotta);background:var(--parchment)}
+    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:26px!important;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.4!important;margin:0!important}
+
+    /* BELIEF PILLARS */
+    .pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:40px 0 56px}
+    .pillar{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--sage-dark);padding:28px 26px}
+    .pillar-icon{font-size:28px;margin-bottom:14px;display:block}
+    .pillar-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--charcoal);margin-bottom:10px;line-height:1.2}
+    .pillar-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;margin:0}
+
+    /* FOR YOU SECTION */
+    .for-you{background:var(--parchment);border:1px solid var(--border);padding:40px 44px;margin:48px 0}
+    .for-you-label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
+    .for-you-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--charcoal);margin-bottom:20px;line-height:1.2}
+    .for-you-title em{font-style:italic;color:var(--sage-dark)}
+    .for-you ul{list-style:none;margin:0;padding:0}
+    .for-you li{font-size:16px;font-weight:300;color:var(--charcoal);line-height:1.8;padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px}
+    .for-you li:last-child{border-bottom:none}
+    .for-you li::before{content:'→';color:var(--terracotta);font-size:14px;margin-top:3px;flex-shrink:0}
+
+    /* DIVIDER */
+    .post-divider{width:60px;height:1px;background:var(--terracotta);margin:52px 0}
+
+    /* CTA */
+    .about-cta{text-align:center;padding:56px 40px;background:var(--charcoal);margin:0}
+    .about-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-light);margin-bottom:20px;display:block}
+    .about-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:16px}
+    .about-cta-title em{font-style:italic;color:var(--sage-light)}
+    .about-cta-sub{font-size:16px;font-weight:300;color:rgba(247,243,238,0.6);margin-bottom:32px}
+    .about-cta-btn{display:inline-block;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal);background:var(--cream);padding:14px 32px;text-decoration:none;transition:background .2s,color .2s}
+    .about-cta-btn:hover{background:var(--sage-light);color:var(--charcoal)}
+
+    /* FOOTER */
+    footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
+    .footer-logo{text-decoration:none}
+    .footer-copy{font-size:12px;color:rgba(247,243,238,0.4)}
+    .footer-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,0.5);text-decoration:none;transition:color .2s}
+    .footer-back:hover{color:var(--cream)}
+
+    /* ANIMATION */
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav{padding:16px 24px}
+      .nav-links{display:none}
+      .about-hero-inner{padding:64px 24px 48px}
+      .about-body{padding:48px 24px 72px}
+      .pillars{grid-template-columns:1fr}
+      .for-you{padding:28px 24px}
+      .about-cta{padding:48px 24px}
+      footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
+    }
+  </style>
+  <title>About Sukara Living — Minimalism, Wholesome Living & Intentional Choices</title>
+  <meta name="description" content="Sukara Living is a space for those seeking a simpler, more intentional life — exploring minimalism, wholesome living, DIY alternatives, and the quiet joy of owning less.">
+  <meta name="keywords" content="about sukara living, minimalism, wholesome living, deinfluencing, intentional lifestyle, simple living, DIY natural recipes">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="https://www.sukaraliving.in/" class="nav-logo">
+      <img src="logo.png" alt="Sukara Living" style="height:74px;width:84px;mix-blend-mode:multiply;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#articles">Articles</a></li>
+      <li><a href="index.html#lifestyle">Lifestyle</a></li>
+      <li><a href="index.html#sustainable">Sustainable</a></li>
+    </ul>
+    <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="about-hero">
+    <div class="about-hero-inner fade-up">
+      <span class="about-eyebrow">About</span>
+      <h1 class="about-hero-title">Sukara — <em>the Japanese art<br>of living with less</em></h1>
+      <p class="about-hero-sub">A quiet corner of the internet for those who believe a simpler life is not a smaller life — it is a fuller one.</p>
+    </div>
+  </header>
+
+  <!-- COVER -->
+  <div class="about-cover">🌿</div>
+
+  <!-- BODY -->
+  <div class="about-body">
+
+    <div class="fade-up">
+      <p>Sukara is the Japanese word for minimalism. It felt like the right name — because what this space is really about is not subtraction for its own sake, but the quiet clarity that arrives when you stop filling your life with things that were never meant to be there in the first place.</p>
+
+      <p>We live in an era of relentless accumulation. More products, more choices, more noise. Social media has turned consumption into a form of entertainment, and somewhere along the way, <strong>wanting became a habit rather than a signal.</strong> Sukara Living exists to gently push back against that — not with judgment, but with a different kind of invitation.</p>
+    </div>
+
+    <div class="pull-quote fade-up">
+      <p>"We need deinfluencing more than anything right now. The choices we make today are shaping the future of this planet — and one person really can change a whole lot."</p>
+    </div>
+
+    <div class="fade-up">
+      <p>This is not just about saving money, though you will. It is not just about a tidier home, though that comes too. It is about something deeper — the growing body of evidence that many of the products we use daily, from synthetic fragrances to plastic packaging, are <strong>quietly disrupting our hormones, our health, and our environment.</strong> A simpler life is not only a more peaceful one. It is a safer one.</p>
+
+      <p>Happiness that comes from within does not require a cart. It does not go on sale. It does not arrive in two days with free delivery. It is built slowly, through intentional choices, meaningful rituals, and the gradually accumulating sense that your life reflects your actual values — not the ones the algorithm decided for you.</p>
+    </div>
+
+    <h2 class="fade-up">What we <em>believe in</em></h2>
+
+    <div class="pillars fade-up">
+      <div class="pillar">
+        <span class="pillar-icon">🌱</span>
+        <div class="pillar-title">Less is genuinely more</div>
+        <p class="pillar-desc">Owning fewer things means more clarity, more space, more time — and far less of your life spent managing, cleaning, and replacing objects that were never really needed.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🧴</span>
+        <div class="pillar-title">Simpler products, healthier bodies</div>
+        <p class="pillar-desc">The market is full of hormone disruptors hiding in everyday products. Going back to basics — natural, simple, often DIY — is one of the most powerful things you can do for your long-term health.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🌍</span>
+        <div class="pillar-title">Individual choices have collective weight</div>
+        <p class="pillar-desc">You may feel small. But one person choosing differently — consistently — creates ripples. Every mindful purchase, every thing left unbought, every toxin-free swap adds up to something real.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">✨</span>
+        <div class="pillar-title">Joy lives inward, not in objects</div>
+        <p class="pillar-desc">Contentment built on things is always fragile. Built on simplicity, presence, and intention — it becomes something much more durable and much more yours.</p>
+      </div>
+    </div>
+
+    <div class="for-you fade-up">
+      <div class="for-you-label">This space is for you if —</div>
+      <div class="for-you-title">You are drawn to a <em>simpler, more intentional life</em></div>
+      <ul>
+        <li>You are curious about minimalism but not sure where to actually begin</li>
+        <li>You want to live more wholesomely without it feeling overwhelming or expensive</li>
+        <li>You are looking for simple DIY alternatives to replace market-bought products full of toxins</li>
+        <li>You want to consume less — and feel better, not worse, for it</li>
+        <li>You believe the way we live matters, for our bodies and for the planet</li>
+      </ul>
+    </div>
+
+    <div class="fade-up">
+      <p>Sukara Living is not a place that will tell you to throw everything away overnight. It is a place that will walk alongside you — with honest writing, practical ideas, and a genuine belief that small, consistent shifts add up to an entirely different kind of life.</p>
+
+      <p>Start wherever you are. There is no right way to begin — only the decision to begin at all.</p>
+    </div>
+
+    <div class="post-divider"></div>
+
+    <div class="fade-up">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.6;">With warmth,<br>Astha<br><span style="font-family:'DM Sans',sans-serif;font-size:13px;font-style:normal;font-weight:300;color:var(--muted);letter-spacing:.06em;">Founder, Sukara Living</span></p>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="about-cta fade-up">
+    <span class="about-cta-eyebrow">Start here</span>
+    <h2 class="about-cta-title">Ready to begin living <em>with less?</em></h2>
+    <p class="about-cta-sub">Explore the articles — from decluttering your home to detoxing your daily routine.</p>
+    <a href="https://www.sukaraliving.in/" class="about-cta-btn">Explore articles →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://www.sukaraliving.in/" class="footer-logo">
+      <img src="logo.png" alt="Sukara Living" style="height:80px;width:auto;mix-blend-mode:screen;">
+    </a>
+    <p class="footer-copy">© 2025 Sukara Living. All rights reserved.</p>
+    <a href="https://www.sukaraliving.in/" class="footer-back">↑ Back to home</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
