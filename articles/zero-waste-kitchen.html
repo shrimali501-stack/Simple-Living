@@ -70,7 +70,40 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } .post-hero-inner { padding: 60px 24px 40px; } .post-body { padding: 48px 24px 72px; } .related { padding: 48px 24px; } .related-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 16px; text-align: center; } 
   .post-cover img { width: 100% !important; }}
-  
+  .breadcrumb {
+  border-bottom: 1px solid #E4E1D8;
+  background: #FAFAF7;
+}
+.breadcrumb-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 12.5px;
+  color: #7A7A72;
+}
+.breadcrumb li + li::before {
+  content: '/';
+  margin: 0 8px;
+  color: #C8C5BC;
+}
+.breadcrumb a {
+  color: #7A7A72;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: #2A2925; }
+.breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
   </style>
   <script type="application/ld+json">
 {
@@ -111,10 +144,20 @@
 </head>
 <body>
   <nav>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">  
+    <div class="breadcrumb-inner">
+    <ol>
+      <li><a href="https://www.sukaraliving.in/">Home</a></li>
+      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
+      <li aria-current="page">Zero-Waste Kitchen</li>
+    </ol>
+    </div>
+    </nav>
     <a href="https://www.sukaraliving.in/" class="nav-logo"><img src="/logo.png" alt="Sukara Living" style="height: 74px; width: 84px; mix-blend-mode: multiply;"></a>
     <ul class="nav-links">
-      <li><a href="index.html#articles">Articles</a></li>
-      <li><a href="index.html#lifestyle">Lifestyle</a></li>
+      <li><a href="https://www.sukaraliving.in/articles.html">Articles</a></li>
+      <li><a href="index.html#lifestyle">Recipes</a></li>
       <li><a href="index.html#sustainable">Sustainable</a></li>
     </ul>
     <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
