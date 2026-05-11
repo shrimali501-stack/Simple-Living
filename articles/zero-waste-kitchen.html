@@ -27,7 +27,7 @@
     .nav-links a:hover { color: var(--sage-dark); }
     .nav-back { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
     .nav-back:hover { color: var(--sage-dark); }
-    .post-hero { padding-top: 80px; background: var(--parchment); border-bottom: 1px solid var(--border); }
+    .post-hero {background: var(--parchment); border-bottom: 1px solid var(--border); }
     .post-hero-inner { max-width: 760px; margin: 0 auto; padding: 80px 40px 60px; }
     .post-category { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; }
     .post-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 24px; }
@@ -73,6 +73,7 @@
   .breadcrumb {
   border-bottom: 1px solid #E4E1D8;
   background: #FAFAF7;
+  margin-top: 80px;
 }
 .breadcrumb-inner {
   max-width: 1120px;
@@ -153,7 +154,16 @@
     </ul>
     <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
   </nav>
-
+  <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">  
+    <div class="breadcrumb-inner">
+    <ol>
+      <li><a href="https://www.sukaraliving.in/">Home</a></li>
+      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
+      <li aria-current="page">Zero-Waste Kitchen</li>
+    </ol>
+    </div>
+    </nav>
   <header class="post-hero">
     <div class="post-hero-inner">
       <span class="post-category">Sustainable</span>
@@ -168,16 +178,7 @@
       </div>
     </div>
   </header>
-   <!-- BREADCRUMB -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">  
-    <div class="breadcrumb-inner">
-    <ol>
-      <li><a href="https://www.sukaraliving.in/">Home</a></li>
-      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
-      <li aria-current="page">Zero-Waste Kitchen</li>
-    </ol>
-    </div>
-    </nav>
+   
   <div class="post-cover" style="padding:40px 0;background:var(--parchment);display:flex;justify-content:center;">
   <img 
     src="/zero-waste-kitchen.webp"

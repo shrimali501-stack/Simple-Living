@@ -24,6 +24,7 @@
     .breadcrumb {
   border-bottom: 1px solid #E4E1D8;
   background: #FAFAF7;
+  margin-top: 80px;
 }
 .breadcrumb-inner {
   max-width: 1120px;
@@ -56,7 +57,7 @@
 .breadcrumb a:hover { color: #2A2925; }
 .breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
     /* HERO */
-    .post-hero{padding-top:80px;background:var(--parchment);border-bottom:1px solid var(--border)}
+    .post-hero{background:var(--parchment);border-bottom:1px solid var(--border)}
     .post-hero-inner{max-width:760px;margin:0 auto;padding:80px 40px 60px}
     .post-category{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
     .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:24px}
@@ -173,7 +174,16 @@
     </ul>
     <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
   </nav>
-
+  <!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <ol>
+      <li><a href="https://www.sukaraliving.in/">Home</a></li>
+      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
+      <li aria-current="page">Art of Organizing</li>
+    </ol>
+  </div>
+</nav>
   <!-- HERO -->
   <header class="post-hero">
     <div class="post-hero-inner">
@@ -189,16 +199,6 @@
       </div>
     </div>
   </header>
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="breadcrumb-inner">
-    <ol>
-      <li><a href="https://www.sukaraliving.in/">Home</a></li>
-      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
-      <li aria-current="page">Art of Organizing</li>
-    </ol>
-  </div>
-</nav>
 
   <!-- COVER IMAGE -->
   <div class="post-cover" style="padding:40px 0;background:var(--parchment);display:flex;justify-content:center;">
