@@ -96,6 +96,40 @@
       .about-cta{padding:48px 24px}
       footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
     }
+    .breadcrumb {
+  border-bottom: 1px solid #E4E1D8;
+  background: #FAFAF7;
+}
+.breadcrumb-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 12.5px;
+  color: #7A7A72;
+}
+.breadcrumb li + li::before {
+  content: '/';
+  margin: 0 8px;
+  color: #C8C5BC;
+}
+.breadcrumb a {
+  color: #7A7A72;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: #2A2925; }
+.breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
   </style>
   <title>About Sukara Living — Minimalism, Wholesome Living & Intentional Choices</title>
   <meta name="description" content="Sukara comes from Sanskrit — one who does good. A space for those seeking a simpler, more intentional life through minimalism, DIY alternatives, and the quiet joy of owning less.">
@@ -106,6 +140,14 @@
 
   <!-- NAV -->
   <nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <ol>
+      <li><a href="https://www.sukaraliving.in/">Home</a></li>
+      <li aria-current="page">About Us</li>
+    </ol>
+  </div>
+</nav>
     <a href="https://www.sukaraliving.in/" class="nav-logo">
       <img src="logo.png" alt="Sukara Living" style="height:74px;width:84px;mix-blend-mode:multiply;">
     </a>
