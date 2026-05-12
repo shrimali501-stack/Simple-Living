@@ -20,15 +20,9 @@
     :root { --cream: #F7F3EE; --parchment: #EDE8DF; --sage: #7A8C6E; --sage-light: #B5C4A8; --sage-dark: #4A5E3E; --terracotta: #C47B5A; --charcoal: #2C2C28; --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 60px; background: rgba(247,243,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; letter-spacing: .12em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
-    .nav-links a:hover { color: var(--sage-dark); }
-    .nav-back { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
-    .nav-back:hover { color: var(--sage-dark); }
+  
     .post-hero {background: var(--parchment); border-bottom: 1px solid var(--border); }
-    .post-hero-inner { max-width: 760px; margin: 0 auto; padding: 24px 40px 60px; }
+    .post-hero-inner { max-width: 760px; margin: 0 auto; padding: 48px 40px 60px; }
     .post-category { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; }
     .post-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 24px; }
     .post-title em { font-style: italic; color: var(--sage-dark); }
@@ -71,40 +65,22 @@
     @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } .post-hero-inner { padding: 60px 24px 40px; } .post-body { padding: 48px 24px 72px; } .related { padding: 48px 24px; } .related-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 16px; text-align: center; } 
   .post-cover img { width: 100% !important; }}
   .breadcrumb {
-  border-bottom: 1px solid #E4E1D8;
-  background: #FAFAF7;
-  margin-top: 140px;
-}
-.breadcrumb-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0.75rem 2rem;
-}
-.breadcrumb ol {
-  list-style: none;
   display: flex;
   align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-  font-size: 12.5px;
+  gap: 8px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
   color: #7A7A72;
-}
-.breadcrumb li + li::before {
-  content: '/';
-  margin: 0 8px;
-  color: #C8C5BC;
+  margin-bottom: 1.2rem;
 }
 .breadcrumb a {
   color: #7A7A72;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color .2s;
 }
-.breadcrumb a:hover { color: #2A2925; }
-.breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
+.breadcrumb a:hover { color: #4A5E3E; }
+.breadcrumb .bc-sep { color: #C8C5BC; }
+.breadcrumb .bc-current { color: #2C2C28; }
   </style>
   <script type="application/ld+json">
 {
@@ -146,19 +122,17 @@
 </head>
 <body>
   <div data-include="nav"></div>
-  <!-- BREADCRUMB -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">  
-    <div class="breadcrumb-inner">
-    <ol>
-      <li><a href="https://www.sukaraliving.in/">Home</a></li>
-      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
-      <li aria-current="page">Zero-Waste Kitchen</li>
-    </ol>
-    </div>
-    </nav>
+  
   <header class="post-hero">
     <div class="post-hero-inner">
-      <span class="post-category">Sustainable</span>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://www.sukaraliving.in/">Home</a>
+    <span class="bc-sep">›</span>
+    <a href="https://www.sukaraliving.in/articles/">Articles</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current">Zero-Waste Kitchen</span>
+  </nav>
+  <span class="post-category">Sustainable</span>
       <h1 class="post-title">A beginner's guide to a <em>zero-waste kitchen</em></h1>
       <p class="post-subtitle">Small swaps that make a real difference — from bulk buying to composting scraps and choosing glass over plastic.</p>
       <div class="post-meta">
