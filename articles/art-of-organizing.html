@@ -158,22 +158,12 @@
   <meta name="description" content="Discover simple home organizing ideas to create a calm, clutter-free home. Learn the art of organizing with practical home storage and organization tips for everyday living.">
   <meta name="keywords" content="art of organizing, decluttering, KonMari method, minimalist living, intentional home, ClutterBug, mindful spaces">
   <link rel="canonical" href="https://www.sukaraliving.in/art-of-organizing.html" />
+  <script src="/includes.js" defer></script>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav>
-    
-    <a href="https://www.sukaraliving.in/" class="nav-logo">
-      <img src="/logo.png" alt="Sukara Living" style="height:100px;width:114px;mix-blend-mode:multiply;">
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://www.sukaraliving.in/articles/">Articles</a></li>
-      <li><a href="index.html#lifestyle">Lifestyle</a></li>
-      <li><a href="index.html#sustainable">Sustainable</a></li>
-    </ul>
-    <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
-  </nav>
+  <div data-include="nav"></div>
   <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="breadcrumb-inner">
@@ -393,13 +383,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <a href="https://www.sukaraliving.in/" class="footer-logo">
-      <img src="/logo.png" alt="Sukara Living" style="height:80px;width:auto;mix-blend-mode:screen;">
-    </a>
-    <p class="footer-copy">© 2025 Sukara Living. All rights reserved.</p>
-    <a href="https://www.sukaraliving.in/" class="footer-back">↑ Back to home</a>
-  </footer>
+  <div data-include="footer"></div>
 
   <script>
     const observer = new IntersectionObserver((entries) => {

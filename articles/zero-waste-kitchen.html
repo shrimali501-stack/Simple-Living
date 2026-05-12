@@ -142,18 +142,10 @@
   "articleSection": "Sustainable"
 }
 </script>
+<script src="/includes.js" defer></script>
 </head>
 <body>
-  <nav>
-   
-    <a href="https://www.sukaraliving.in/" class="nav-logo"><img src="/logo.png" alt="Sukara Living" style="height: 100px; width: 114px; mix-blend-mode: multiply;"></a>
-    <ul class="nav-links">
-      <li><a href="https://www.sukaraliving.in/articles/">Articles</a></li>
-      <li><a href="index.html#lifestyle">Recipes</a></li>
-      <li><a href="index.html#sustainable">Sustainable</a></li>
-    </ul>
-    <a href="https://www.sukaraliving.in/" class="nav-back">← Back to home</a>
-  </nav>
+  <div data-include="nav"></div>
   <!-- BREADCRUMB -->
     <nav class="breadcrumb" aria-label="Breadcrumb">  
     <div class="breadcrumb-inner">
@@ -259,11 +251,7 @@
     </div>
   </section>
 
-  <footer>
-    <a href="https://www.sukaraliving.in/" class="footer-logo"><img src="/logo.png" alt="Sukara Living" style="height: 80px; width: auto; mix-blend-mode: screen;"></a>
-    <p class="footer-copy">© 2025 Sukara Living. All rights reserved.</p>
-    <a href="https://www.sukaraliving.in/" class="footer-back">↑ Back to home</a>
-  </footer>
+  <div data-include="footer"></div>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
