@@ -1,0 +1,47 @@
+<style>
+  /* ── SHARED NAV STYLES ── */
+  nav.site-nav {
+    position: sticky; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 6px 60px;
+    background: rgba(247, 243, 238, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #D8D0C4;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 12px; font-weight: 500; letter-spacing: .12em;
+    text-transform: uppercase; color: #7A7A72;
+    text-decoration: none; transition: color .2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: #4A5E3E; }
+  .nav-cta {
+    font-size: 12px; font-weight: 500; letter-spacing: .1em;
+    text-transform: uppercase; padding: 10px 22px;
+    border: 1px solid #7A8C6E; color: #4A5E3E;
+    background: transparent; cursor: pointer;
+    transition: all .2s; text-decoration: none;
+  }
+  .nav-cta:hover { background: #7A8C6E; color: #FDFCFA; }
+
+  @media (max-width: 900px) {
+    nav.site-nav { padding: 12px 24px; }
+    .nav-links, .nav-cta { display: none; }
+  }
+</style>
+
+<nav class="site-nav">
+  <a href="https://www.sukaraliving.in/">
+    <img src="https://www.sukaraliving.in/logo.png"
+         alt="Sukara Living"
+         style="height: 84px; width: auto; display: block; mix-blend-mode: multiply;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://www.sukaraliving.in/articles/">Articles</a></li>
+    <li><a href="https://www.sukaraliving.in/#lifestyle">Recipes</a></li>
+    <li><a href="https://www.sukaraliving.in/#sustainable">Sustainable</a></li>
+    <li><a href="https://www.sukaraliving.in/about.html">About</a></li>
+  </ul>
+  <a href="#newsletter" class="nav-cta">Subscribe</a>
+</nav>
