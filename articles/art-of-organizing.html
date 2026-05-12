@@ -22,40 +22,23 @@
     .nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
     .nav-back:hover{color:var(--sage-dark)}
     .breadcrumb {
-  border-bottom: 1px solid #E4E1D8;
-  background: #FAFAF7;
-  margin-top: 140px;
-}
-.breadcrumb-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0.75rem 2rem;
-}
-.breadcrumb ol {
-  list-style: none;
   display: flex;
   align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-  font-size: 12.5px;
+  gap: 8px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
   color: #7A7A72;
-}
-.breadcrumb li + li::before {
-  content: '/';
-  margin: 0 8px;
-  color: #C8C5BC;
+  margin-bottom: 1.2rem;
 }
 .breadcrumb a {
   color: #7A7A72;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color .2s;
 }
-.breadcrumb a:hover { color: #2A2925; }
-.breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
+.breadcrumb a:hover { color: #4A5E3E; }
+.breadcrumb .bc-sep { color: #C8C5BC; }
+.breadcrumb .bc-current { color: #2C2C28; }
+
     /* HERO */
     .post-hero{background:var(--parchment);border-bottom:1px solid var(--border)}
     .post-hero-inner{max-width:760px;margin:0 auto;padding:24px 40px 60px}
@@ -164,19 +147,17 @@
 
   <!-- NAV -->
   <div data-include="nav"></div>
-  <!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="breadcrumb-inner">
-    <ol>
-      <li><a href="https://www.sukaraliving.in/">Home</a></li>
-      <li><a href="https://www.sukaraliving.in/articles/">All Articles</a></li>
-      <li aria-current="page">Art of Organizing</li>
-    </ol>
-  </div>
-</nav>
+
   <!-- HERO -->
   <header class="post-hero">
     <div class="post-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.sukaraliving.in/">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/articles/">Articles</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Art of Organizing</span>
+      </nav>
       <span class="post-category">Lifestyle</span>
       <h1 class="post-title">The Art of Home Organizing</h1>
       <p class="post-subtitle">True organization is not about buying more boxes. It is about deciding what deserves a place in your life — and then building systems that honour that decision.</p>
