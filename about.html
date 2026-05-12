@@ -13,17 +13,9 @@
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
 
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(247,243,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .nav-logo{text-decoration:none}
-    .nav-links{display:flex;gap:36px;list-style:none}
-    .nav-links a{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-    .nav-links a:hover{color:var(--sage-dark)}
-    .nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-    .nav-back:hover{color:var(--sage-dark)}
-
+    
     /* HERO */
-    .about-hero{padding-top:80px;background:var(--parchment);border-bottom:1px solid var(--border)}
+    .about-hero{background:var(--parchment);border-bottom:1px solid var(--border)}
     .about-hero-inner{max-width:760px;margin:0 auto;padding:100px 40px 80px}
     .about-eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px;display:block}
     .about-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,76px);font-weight:300;line-height:1.05;color:var(--charcoal);margin-bottom:32px}
@@ -74,13 +66,7 @@
     .about-cta-btn{display:inline-block;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal);background:var(--cream);padding:14px 32px;text-decoration:none;transition:background .2s,color .2s}
     .about-cta-btn:hover{background:var(--sage-light);color:var(--charcoal)}
 
-    /* FOOTER */
-    footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
-    .footer-logo{text-decoration:none}
-    .footer-copy{font-size:12px;color:rgba(247,243,238,0.4)}
-    .footer-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,0.5);text-decoration:none;transition:color .2s}
-    .footer-back:hover{color:var(--cream)}
-
+  
     /* ANIMATION */
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
     .fade-up.visible{opacity:1;transform:translateY(0)}
@@ -96,46 +82,13 @@
       .about-cta{padding:48px 24px}
       footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
     }
-    .breadcrumb {
-  border-bottom: 1px solid #E4E1D8;
-  background: #FAFAF7;
-}
-.breadcrumb-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0.75rem 2rem;
-}
-.breadcrumb ol {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-  font-size: 12.5px;
-  color: #7A7A72;
-}
-.breadcrumb li + li::before {
-  content: '/';
-  margin: 0 8px;
-  color: #C8C5BC;
-}
-.breadcrumb a {
-  color: #7A7A72;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.breadcrumb a:hover { color: #2A2925; }
-.breadcrumb li[aria-current="page"] { color: #2A2925; font-weight: 500; }
+    
   </style>
   <title>About Sukara Living — Minimalism, Wholesome Living & Intentional Choices</title>
   <meta name="description" content="Sukara comes from Sanskrit — one who does good. A space for those seeking a simpler, more intentional life through minimalism, DIY alternatives, and the quiet joy of owning less.">
   <meta name="keywords" content="about sukara living, minimalism, wholesome living, deinfluencing, intentional lifestyle, simple living, DIY natural recipes">
   <link rel="canonical" href="https://www.sukaraliving.in/about.html" />
-<script src="/includes.js" defer></script>
+  <script src="/includes.js" defer></script>
 </head>
 <body>
 
@@ -150,14 +103,7 @@
       <p class="about-hero-sub">A quiet corner of the internet for those who believe a simpler life is not a smaller life — it is a fuller one.</p>
     </div>
   </header>
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="breadcrumb-inner">
-    <ol>
-      <li><a href="https://www.sukaraliving.in/">Home</a></li>
-      <li aria-current="page">About Us</li>
-    </ol>
-  </div>
-</nav>
+
   <!-- COVER -->
   <div class="about-cover">🌿</div>
 
