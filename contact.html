@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="sl-favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="sl-favicon.png">
+  <link rel="apple-touch-icon" href="sl-favicon.png">
+
+  <title>Contact Sukara Living — Get in Touch</title>
+
+  <meta name="description" content="Get in touch with Sukara Living. Whether you have a question, collaboration idea, or simply want to say hello, we'd love to hear from you.">
+  
+  <meta name="keywords" content="contact sukara living, minimalism blog contact, simple living, wholesome living, intentional lifestyle">
+
+  <link rel="canonical" href="https://www.sukaraliving.in/contact.html" />
+
+  <script src="/includes.js" defer></script>
+
+  <style>
+    *,*::before,*::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0
+    }
+
+    :root{
+      --cream:#F7F3EE;
+      --parchment:#EDE8DF;
+      --sage-light:#B5C4A8;
+      --sage-dark:#4A5E3E;
+      --terracotta:#C47B5A;
+      --charcoal:#2C2C28;
+      --muted:#7A7A72;
+      --border:#D8D0C4;
+      --white:#FDFCFA
+    }
+
+    html{
+      scroll-behavior:smooth
+    }
+
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--cream);
+      color:var(--charcoal);
+      font-size:16px;
+      line-height:1.7
+    }
+
+    /* HERO */
+
+    .contact-hero{
+      background:var(--parchment);
+      border-bottom:1px solid var(--border)
+    }
+
+    .contact-hero-inner{
+      max-width:760px;
+      margin:0 auto;
+      padding:100px 40px 80px
+    }
+
+    .contact-eyebrow{
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--terracotta);
+      margin-bottom:24px;
+      display:block
+    }
+
+    .contact-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(42px,6vw,76px);
+      font-weight:300;
+      line-height:1.05;
+      color:var(--charcoal);
+      margin-bottom:32px
+    }
+
+    .contact-title em{
+      font-style:italic;
+      color:var(--sage-dark)
+    }
+
+    .contact-sub{
+      font-size:19px;
+      font-weight:300;
+      color:var(--muted);
+      line-height:1.75;
+      max-width:560px
+    }
+
+    /* COVER */
+
+    .contact-cover{
+      width:100%;
+      min-height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:100px;
+      background:linear-gradient(135deg,#D7C6B2,#C8D4B4)
+    }
+
+    /* BODY */
+
+    .contact-body{
+      max-width:720px;
+      margin:0 auto;
+      padding:80px 40px 100px
+    }
+
+    .contact-body p{
+      font-size:17px;
+      font-weight:300;
+      color:var(--charcoal);
+      line-height:1.9;
+      margin-bottom:28px
+    }
+
+    .contact-body strong{
+      font-weight:500
+    }
+
+    .contact-body em{
+      font-style:italic;
+      color:var(--sage-dark)
+    }
+
+    .contact-card{
+      background:var(--white);
+      border:1px solid var(--border);
+      border-top:3px solid var(--sage-dark);
+      padding:40px 36px;
+      margin:44px 0
+    }
+
+    .contact-label{
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--terracotta);
+      margin-bottom:18px
+    }
+
+    .contact-heading{
+      font-family:'Cormorant Garamond',serif;
+      font-size:34px;
+      font-weight:300;
+      color:var(--charcoal);
+      line-height:1.2;
+      margin-bottom:16px
+    }
+
+    .contact-heading em{
+      font-style:italic;
+      color:var(--sage-dark)
+    }
+
+    .contact-info{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      margin-top:28px
+    }
+
+    .contact-item{
+      padding-bottom:18px;
+      border-bottom:1px solid var(--border)
+    }
+
+    .contact-item:last-child{
+      border-bottom:none;
+      padding-bottom:0
+    }
+
+    .contact-item-label{
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:var(--terracotta);
+      margin-bottom:8px
+    }
+
+    .contact-item a{
+      font-size:17px;
+      color:var(--charcoal);
+      text-decoration:none;
+      transition:color .2s ease
+    }
+
+    .contact-item a:hover{
+      color:var(--sage-dark)
+    }
+
+    .note-box{
+      background:var(--parchment);
+      border-left:3px solid var(--terracotta);
+      padding:28px 32px;
+      margin:48px 0
+    }
+
+    .note-box p{
+      margin:0;
+      font-family:'Cormorant Garamond',serif;
+      font-size:25px;
+      font-style:italic;
+      line-height:1.5
+    }
+
+    /* CTA */
+
+    .contact-cta{
+      text-align:center;
+      padding:56px 40px;
+      background:var(--charcoal)
+    }
+
+    .contact-cta-eyebrow{
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--sage-light);
+      margin-bottom:20px;
+      display:block
+    }
+
+    .contact-cta-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(28px,4vw,48px);
+      font-weight:300;
+      color:var(--cream);
+      line-height:1.2;
+      margin-bottom:16px
+    }
+
+    .contact-cta-title em{
+      font-style:italic;
+      color:var(--sage-light)
+    }
+
+    .contact-cta-sub{
+      font-size:16px;
+      font-weight:300;
+      color:rgba(247,243,238,0.65);
+      margin-bottom:32px
+    }
+
+    .contact-cta-btn{
+      display:inline-block;
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--charcoal);
+      background:var(--cream);
+      padding:14px 32px;
+      text-decoration:none;
+      transition:background .2s,color .2s
+    }
+
+    .contact-cta-btn:hover{
+      background:var(--sage-light);
+      color:var(--charcoal)
+    }
+
+    /* ANIMATION */
+
+    .fade-up{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .7s ease,transform .7s ease
+    }
+
+    .fade-up.visible{
+      opacity:1;
+      transform:translateY(0)
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .contact-hero-inner{
+        padding:64px 24px 48px
+      }
+
+      .contact-body{
+        padding:48px 24px 72px
+      }
+
+      .contact-card{
+        padding:32px 24px
+      }
+
+      .note-box{
+        padding:24px
+      }
+
+      .contact-cta{
+        padding:48px 24px
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div data-include="nav"></div>
+
+  <!-- HERO -->
+  <header class="contact-hero">
+    <div class="contact-hero-inner fade-up">
+      <span class="contact-eyebrow">Contact</span>
+
+      <h1 class="contact-title">
+        Let's <em>connect</em>
+      </h1>
+
+      <p class="contact-sub">
+        Whether you have a question, a thoughtful idea, a collaboration inquiry, or simply want to say hello — I would genuinely love to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <!-- COVER -->
+  <div class="contact-cover">✉️</div>
+
+  <!-- BODY -->
+  <div class="contact-body">
+
+    <div class="fade-up">
+      <p>
+        Sukara Living was created to be a slower, more intentional corner of the internet — a space rooted in simplicity, mindfulness, and thoughtful living.
+      </p>
+
+      <p>
+        If something here resonated with you, if you have a question about minimalism or wholesome living, or if you simply want to share your own journey toward living with less, my inbox is always open.
+      </p>
+    </div>
+
+    <div class="contact-card fade-up">
+
+      <div class="contact-label">Get in touch</div>
+
+      <h2 class="contact-heading">
+        Reach out <em>anytime</em>
+      </h2>
+
+      <p>
+        I personally read every message and try my best to respond thoughtfully. Thank you for being here.
+      </p>
+
+      <div class="contact-info">
+
+  <div class="contact-item">
+    <div class="contact-item-label">Email</div>
+    <a href="mailto:hello@sukaraliving.in">
+      hello@sukaraliving.in
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-item-label">Phone</div>
+    <a href="tel:+917727803473">
+      +91 77278 03473
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-item-label">Pinterest</div>
+    <a href="https://www.pinterest.com/" target="_blank">
+      Follow Sukara Living →
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-item-label">Website</div>
+    <a href="https://www.sukaraliving.in/">
+      www.sukaraliving.in
+    </a>
+  </div>
+
+    </div>
+    </div>
+
+    <div class="note-box fade-up">
+      <p>
+        "A quieter, slower, more intentional life begins with small choices made consistently."
+      </p>
+    </div>
+
+    <div class="fade-up">
+      <p>
+        I especially love hearing from readers who are exploring minimalism, reducing toxic products at home, simplifying routines, or learning to consume more intentionally in a world constantly asking us to buy more.
+      </p>
+
+      <p>
+        Thank you for being part of this space. Truly.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="contact-cta fade-up">
+
+    <span class="contact-cta-eyebrow">
+      Explore
+    </span>
+
+    <h2 class="contact-cta-title">
+      Return to a <em>slower kind of living</em>
+    </h2>
+
+    <p class="contact-cta-sub">
+      Browse articles on minimalism, wholesome routines, intentional habits, and simpler living.
+    </p>
+
+    <a href="https://www.sukaraliving.in/" class="contact-cta-btn">
+      Explore articles →
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div data-include="footer"></div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
