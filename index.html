@@ -671,7 +671,118 @@
 
     </div>
   </section>
+  <!-- MAKE AT HOME TEASER -->
+  <section class="mah-teaser section" id="make-at-home">
+    <div class="section-label">Make at Home</div>
+    <h2 class="section-title">Made from <em>scratch, with care</em></h2>
+    <p class="mah-intro">Simple recipes to make what you eat, use, and live with — from your own kitchen.</p>
 
+    <div class="mah-grid">
+
+      <!-- Body & Skin Care -->
+      <a href="https://www.sukaraliving.in/make-at-home/body-skin-care.html" class="mah-card">
+        <div class="mah-card-img" style="background:linear-gradient(135deg,#E8D5C4,#C4B8A8);">
+          <span class="mah-card-emoji">🧴</span>
+        </div>
+        <div class="mah-card-body">
+          <span class="mah-tag">Body & Skin Care</span>
+          <h3 class="mah-card-title">Wholesome recipes for your skin</h3>
+          <p class="mah-card-desc">Whipped body butters, sugar scrubs, lip balms, face serums — made with ingredients you can actually read and trust.</p>
+          <ul class="mah-preview-list">
+            <li>Whipped Shea Body Butter</li>
+            <li>DIY Sugar Scrub</li>
+            <li>Simple Rose Face Toner</li>
+          </ul>
+          <span class="mah-cta">See all recipes →</span>
+        </div>
+      </a>
+
+      <!-- Daily Cooking Staples -->
+      <a href="https://www.sukaraliving.in/make-at-home/daily-cooking-staples.html" class="mah-card">
+        <div class="mah-card-img" style="background:linear-gradient(135deg,#D4C9A8,#C4B898);">
+          <span class="mah-card-emoji">🫙</span>
+        </div>
+        <div class="mah-card-body">
+          <span class="mah-tag">Daily Cooking Staples</span>
+          <h3 class="mah-card-title">Pantry staples made at home</h3>
+          <p class="mah-card-desc">Ghee, paneer, curd, peanut butter, pickled onions — the everyday things that taste infinitely better when you make them yourself.</p>
+          <ul class="mah-preview-list">
+            <li>Homemade Ghee</li>
+            <li>Paneer from Scratch</li>
+            <li>Strawberry Chia Jam</li>
+          </ul>
+          <span class="mah-cta">See all recipes →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="text-align:center; margin-top: 3rem;">
+      <a href="https://www.sukaraliving.in/make-at-home/" class="btn-primary">Explore all Make at Home</a>
+    </div>
+  </section>
+
+  <style>
+    .mah-teaser { background: var(--white); }
+    .mah-intro {
+      font-size: 15px; font-weight: 300; color: var(--muted);
+      margin-top: 0.75rem; margin-bottom: 3rem; max-width: 520px;
+    }
+    .mah-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2rem; max-width: 1200px;
+    }
+    .mah-card {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--border); text-decoration: none;
+      color: inherit; transition: transform .25s, box-shadow .25s;
+      background: var(--cream);
+    }
+    .mah-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(42,41,37,0.09);
+    }
+    .mah-card-img {
+      height: 200px; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .mah-card-emoji { font-size: 64px; }
+    .mah-card-body { padding: 2rem; display: flex; flex-direction: column; }
+    .mah-tag {
+      font-size: 10.5px; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 0.75rem; display: block;
+    }
+    .mah-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 400; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 0.75rem;
+    }
+    .mah-card-desc {
+      font-size: 14px; font-weight: 300; color: var(--muted);
+      line-height: 1.7; margin-bottom: 1.25rem;
+    }
+    .mah-preview-list {
+      list-style: none; padding: 0; margin: 0 0 1.5rem;
+      border-top: 1px solid var(--border); padding-top: 1rem;
+    }
+    .mah-preview-list li {
+      font-size: 13px; font-weight: 300; color: var(--charcoal);
+      padding: 6px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .mah-preview-list li::before {
+      content: '→'; color: var(--terracotta); font-size: 12px;
+    }
+    .mah-cta {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--sage-dark);
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .mah-grid { grid-template-columns: 1fr; }
+    }
+  </style>
   <!-- QUOTE -->
   <section class="quote-section" id="sustainable">
     <p class="quote-text">"The things you own end up owning you. It's only after you lose everything that you're free to do anything."</p>

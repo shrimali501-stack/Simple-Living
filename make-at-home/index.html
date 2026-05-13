@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make at Home · Sukara Living</title>
+  <meta name="description" content="Simple recipes to make your own masalas, cleaning products, skin care, room scents, and everyday pantry staples at home.">
+  <link rel="canonical" href="https://www.sukaraliving.in/make-at-home/">
+  <link rel="icon" type="image/png" href="/sl-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="/includes.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F3EE; --parchment: #EDE8DF;
+      --sage-light: #B5C4A8; --sage-dark: #4A5E3E;
+      --terracotta: #C47B5A; --charcoal: #2C2C28;
+      --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream); color: var(--charcoal);
+      font-size: 16px; line-height: 1.7;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--parchment);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 60px 60px;
+    }
+    .eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
+    }
+    .eyebrow::after {
+      content: ''; width: 40px; height: 1px; background: var(--terracotta);
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 5vw, 68px); font-weight: 300;
+      line-height: 1.1; color: var(--charcoal); margin-bottom: 20px;
+    }
+    .page-title em { font-style: italic; color: var(--sage-dark); }
+    .page-sub {
+      font-size: 16px; font-weight: 300; color: var(--muted);
+      max-width: 520px; line-height: 1.8;
+    }
+
+    /* CATEGORY GRID */
+    .categories {
+      max-width: 1200px; margin: 0 auto;
+      padding: 72px 60px 100px;
+    }
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    /* Full width for last row if odd */
+    .cat-card:nth-child(4) { grid-column: 1 / 2; }
+    .cat-card:nth-child(5) { grid-column: 2 / 3; }
+
+    .cat-card {
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .cat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(42,41,37,0.10);
+    }
+    .cat-card-img {
+      height: 220px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .cat-emoji { font-size: 72px; }
+    .cat-count {
+      position: absolute; bottom: 14px; right: 16px;
+      font-size: 11px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--white);
+      background: rgba(44,44,40,0.55);
+      padding: 4px 12px; backdrop-filter: blur(4px);
+    }
+    .cat-body { padding: 1.75rem 1.75rem 2rem; flex: 1; display: flex; flex-direction: column; }
+    .cat-tag {
+      font-size: 10.5px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 0.6rem; display: block;
+    }
+    .cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 400; line-height: 1.25;
+      color: var(--charcoal); margin-bottom: 0.75rem;
+    }
+    .cat-desc {
+      font-size: 13.5px; font-weight: 300; color: var(--muted);
+      line-height: 1.7; flex: 1; margin-bottom: 1.25rem;
+    }
+    .cat-previews {
+      list-style: none; padding: 0;
+      border-top: 1px solid var(--border); padding-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .cat-previews li {
+      font-size: 13px; font-weight: 300; color: var(--charcoal);
+      padding: 5px 0; border-bottom: 1px dashed var(--border);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .cat-previews li:last-child { border-bottom: none; }
+    .cat-previews li::before { content: '·'; color: var(--terracotta); font-size: 18px; }
+    .cat-link {
+      font-size: 12px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--sage-dark);
+      display: flex; align-items: center; gap: 6px;
+      transition: gap .2s;
+    }
+    .cat-card:hover .cat-link { gap: 10px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-card:nth-child(4),
+      .cat-card:nth-child(5) { grid-column: auto; }
+      .page-header { padding: 48px 24px 40px; }
+      .categories { padding: 48px 24px 72px; }
+    }
+    @media (max-width: 580px) {
+      .categories-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <p class="eyebrow">Make at Home</p>
+    <h1 class="page-title">Made with your <em>own hands</em></h1>
+    <p class="page-sub">Simple, honest recipes for what you eat, clean with, and put on your body — made from ingredients you can trust.</p>
+  </div>
+
+  <!-- CATEGORIES -->
+  <main class="categories">
+    <div class="categories-grid">
+
+      <!-- 1. Masalas -->
+      <a class="cat-card" href="https://www.sukaraliving.in/make-at-home/masalas.html">
+        <div class="cat-card-img" style="background: linear-gradient(135deg, #D4A87A, #C47B5A);">
+          <span class="cat-emoji">🌶️</span>
+          <span class="cat-count">8 recipes</span>
+        </div>
+        <div class="cat-body">
+          <span class="cat-tag">Masalas</span>
+          <h2 class="cat-title">Homemade Masalas & Spice Blends</h2>
+          <p class="cat-desc">Skip the store-bought packets full of fillers. Blending your own masalas takes minutes and transforms every dish you make.</p>
+          <ul class="cat-previews">
+            <li>Garam Masala</li>
+            <li>Chaat Masala</li>
+            <li>Chole Masala</li>
+          </ul>
+          <span class="cat-link">Explore recipes →</span>
+        </div>
+      </a>
+
+      <!-- 2. Home Cleaning -->
+      <a class="cat-card" href="https://www.sukaraliving.in/make-at-home/home-cleaning.html">
+        <div class="cat-card-img" style="background: linear-gradient(135deg, #B5C4A8, #7A8C6E);">
+          <span class="cat-emoji">🧹</span>
+          <span class="cat-count">7 recipes</span>
+        </div>
+        <div class="cat-body">
+          <span class="cat-tag">Home Cleaning</span>
+          <h2 class="cat-title">Natural Home Cleaning Products</h2>
+          <p class="cat-desc">Non-toxic, effective, and kind to the planet. Replace every harsh chemical cleaner in your home with these simple recipes.</p>
+          <ul class="cat-previews">
+            <li>Disinfectant Spray</li>
+            <li>All-Purpose Cleaning Paste</li>
+            <li>Liquid Dish Soap</li>
+          </ul>
+          <span class="cat-link">Explore recipes →</span>
+        </div>
+      </a>
+
+      <!-- 3. Body & Skin Care -->
+      <a class="cat-card" href="https://www.sukaraliving.in/make-at-home/body-skin-care.html">
+        <div class="cat-card-img" style="background: linear-gradient(135deg, #E8D5C4, #C4A898);">
+          <span class="cat-emoji">🧴</span>
+          <span class="cat-count">9 recipes</span>
+        </div>
+        <div class="cat-body">
+          <span class="cat-tag">Body & Skin Care</span>
+          <h2 class="cat-title">Wholesome Body & Skin Recipes</h2>
+          <p class="cat-desc">What goes on your skin goes into your body. These recipes use pure, simple ingredients — no hormone disruptors, no hidden chemicals.</p>
+          <ul class="cat-previews">
+            <li>Whipped Shea Body Butter</li>
+            <li>DIY Coffee Sugar Scrub</li>
+            <li>Simple Rose Face Toner</li>
+          </ul>
+          <span class="cat-link">Explore recipes →</span>
+        </div>
+      </a>
+
+      <!-- 4. DIY Room Scents -->
+      <a class="cat-card" href="https://www.sukaraliving.in/make-at-home/room-scents.html">
+        <div class="cat-card-img" style="background: linear-gradient(135deg, #C8D4B4, #A8B898);">
+          <span class="cat-emoji">🌿</span>
+          <span class="cat-count">6 recipes</span>
+        </div>
+        <div class="cat-body">
+          <span class="cat-tag">DIY Room Scents</span>
+          <h2 class="cat-title">Natural Home Fragrances</h2>
+          <p class="cat-desc">Simmer pots, linen sprays, and beeswax candles — scent your home with real botanicals instead of synthetic fragrance chemicals.</p>
+          <ul class="cat-previews">
+            <li>Citrus & Herb Simmer Pot</li>
+            <li>Lavender Linen Spray</li>
+            <li>Beeswax Pillar Candles</li>
+          </ul>
+          <span class="cat-link">Explore recipes →</span>
+        </div>
+      </a>
+
+      <!-- 5. Daily Cooking Staples -->
+      <a class="cat-card" href="https://www.sukaraliving.in/make-at-home/daily-cooking-staples.html">
+        <div class="cat-card-img" style="background: linear-gradient(135deg, #D4C9A8, #B8AA88);">
+          <span class="cat-emoji">🫙</span>
+          <span class="cat-count">12 recipes</span>
+        </div>
+        <div class="cat-body">
+          <span class="cat-tag">Daily Cooking Staples</span>
+          <h2 class="cat-title">Pantry Staples Made at Home</h2>
+          <p class="cat-desc">Ghee, paneer, curd, peanut butter, pickled onions — the everyday things that taste infinitely better and cost less when you make them yourself.</p>
+          <ul class="cat-previews">
+            <li>Homemade Ghee</li>
+            <li>Paneer from Scratch</li>
+            <li>Indian Mango Pickle</li>
+          </ul>
+          <span class="cat-link">Explore recipes →</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+
+</body>
+</html>
