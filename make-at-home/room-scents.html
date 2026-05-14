@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY Natural Room Scents · Make at Home · Sukara Living</title>
+  <meta name="description" content="Scent your home naturally with simmer pots, linen sprays, beeswax candles and reed diffusers — real botanicals instead of synthetic fragrance chemicals.">
+  <link rel="canonical" href="https://www.sukaraliving.in/make-at-home/room-scents.html">
+  <link rel="icon" type="image/png" href="/sl-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="/includes.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F3EE; --parchment: #EDE8DF;
+      --sage-light: #B5C4A8; --sage-dark: #4A5E3E;
+      --terracotta: #C47B5A; --charcoal: #2C2C28;
+      --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: 0.04em; color: #7A7A72; margin-bottom: 1.4rem; }
+    .breadcrumb a { color: #7A7A72; text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: #4A5E3E; }
+    .bc-sep { color: #C8C5BC; }
+    .bc-current { color: #2C2C28; }
+
+    .page-hero { background: var(--parchment); border-bottom: 1px solid var(--border); padding: 56px 60px 52px; }
+    .page-hero-inner { max-width: 760px; }
+    .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
+    .eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 18px; }
+    .page-title em { font-style: italic; color: var(--sage-dark); }
+    .page-sub { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.8; }
+
+    .why-strip { background: var(--sage-dark); padding: 36px 60px; display: flex; gap: 48px; }
+    .why-item { flex: 1; }
+    .why-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+    .why-title { font-size: 13px; font-weight: 500; color: var(--sage-light); margin-bottom: 4px; }
+    .why-desc { font-size: 13px; font-weight: 300; color: rgba(247,243,238,0.65); line-height: 1.6; }
+
+    /* SCENT FAMILIES */
+    .scent-families { background: var(--white); border-bottom: 1px solid var(--border); padding: 52px 60px; }
+    .scent-inner { max-width: 1120px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 300; line-height: 1.15; color: var(--charcoal); margin-bottom: 32px; }
+    .section-title em { font-style: italic; color: var(--sage-dark); }
+    .families-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .family-card { background: var(--cream); border: 1px solid var(--border); padding: 1.25rem; text-align: center; }
+    .family-icon { font-size: 32px; display: block; margin-bottom: 10px; }
+    .family-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--charcoal); margin-bottom: 6px; }
+    .family-notes { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.5; }
+
+    /* RECIPES */
+    .recipes-section { max-width: 1120px; margin: 0 auto; padding: 64px 60px 100px; }
+
+    /* FEATURED SIMMER POTS - full width cards */
+    .simmer-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--charcoal); margin-bottom: 1.25rem; }
+    .simmer-section-title em { font-style: italic; color: var(--sage-dark); }
+    .simmer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3.5rem; }
+
+    .simmer-card { background: var(--white); border: 1px solid var(--border); padding: 1.5rem; transition: transform .25s, box-shadow .25s; }
+    .simmer-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(42,41,37,0.08); }
+    .simmer-season { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 0.4rem; }
+    .simmer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .simmer-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+    .simmer-items { font-size: 13px; font-weight: 300; color: var(--charcoal); border-top: 1px solid var(--border); padding-top: 0.75rem; }
+    .simmer-items span { color: var(--terracotta); margin-right: 6px; }
+
+    /* OTHER RECIPES GRID */
+    .recipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .recipe-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+    .recipe-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(42,41,37,0.09); }
+    .recipe-card-top { padding: 1.5rem 1.5rem 0; }
+    .recipe-tag { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 0.5rem; }
+    .recipe-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; line-height: 1.25; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .recipe-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+    .recipe-meta { display: flex; gap: 12px; padding: 0.6rem 1.5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--cream); flex-wrap: wrap; }
+    .meta-pill { font-size: 11px; font-weight: 300; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+    .recipe-ingredients { padding: 1rem 1.5rem; flex: 1; }
+    .ing-label { font-size: 10.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.6rem; display: block; }
+    .ing-list { list-style: none; padding: 0; }
+    .ing-list li { font-size: 13px; font-weight: 300; color: var(--charcoal); padding: 4px 0; border-bottom: 1px dashed var(--border); display: flex; gap: 7px; }
+    .ing-list li:last-child { border-bottom: none; }
+    .ing-list li::before { content: '·'; color: var(--terracotta); font-size: 16px; line-height: 1.3; flex-shrink: 0; }
+    .recipe-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .recipe-cta { font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--sage-dark); cursor: pointer; }
+    .difficulty { font-size: 11px; color: var(--muted); }
+
+    .tip-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 60px; }
+    .tip-inner { max-width: 760px; margin: 0 auto; }
+    .tip-label { font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 12px; }
+    .tip-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.6; }
+
+    .divider-label { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .simmer-grid, .recipe-grid, .families-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-hero { padding: 48px 24px 40px; }
+      .recipes-section, .scent-families { padding: 48px 24px 60px; }
+      .why-strip { flex-direction: column; gap: 24px; padding: 32px 24px; }
+      .tip-section { padding: 40px 24px; }
+    }
+    @media (max-width: 580px) {
+      .simmer-grid, .recipe-grid, .families-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.sukaraliving.in/">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Room Scents</span>
+      </nav>
+      <p class="eyebrow">Make at Home</p>
+      <h1 class="page-title">Natural Home <em>Fragrances</em></h1>
+      <p class="page-sub">Synthetic air fresheners and plug-ins release chemicals that linger in your indoor air for hours. These recipes use real botanicals — and they smell far more beautiful anyway.</p>
+    </div>
+  </div>
+
+  <div class="why-strip">
+    <div class="why-item">
+      <span class="why-icon">🌬️</span>
+      <div class="why-title">No VOCs in your air</div>
+      <p class="why-desc">Most commercial air fresheners release volatile organic compounds that contribute to poor indoor air quality. Natural scents don't.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">🍊</span>
+      <div class="why-title">Real botanicals</div>
+      <p class="why-desc">Orange peel, cinnamon sticks, fresh herbs, beeswax — ingredients with actual fragrance compounds, not synthetic approximations.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">🏡</span>
+      <div class="why-title">Sets the mood of a room</div>
+      <p class="why-desc">Citrus and herb for mornings. Warm spice for winter evenings. Lavender for a bedroom. Scent done naturally can completely change how a room feels.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">🎁</span>
+      <div class="why-title">Beautiful to give</div>
+      <p class="why-desc">A jar of simmer pot ingredients or a handmade beeswax candle makes a deeply personal, zero-waste gift anyone would love.</p>
+    </div>
+  </div>
+
+  <!-- SCENT FAMILIES -->
+  <div class="scent-families">
+    <div class="scent-inner">
+      <div class="section-label">Before you start</div>
+      <h2 class="section-title">Choose your <em>scent family</em></h2>
+      <div class="families-grid">
+        <div class="family-card fade-up">
+          <span class="family-icon">🍊</span>
+          <div class="family-name">Citrus & Bright</div>
+          <p class="family-notes">Orange, lemon, grapefruit, lemongrass. Uplifting, clean, morning energy.</p>
+        </div>
+        <div class="family-card fade-up">
+          <span class="family-icon">🌿</span>
+          <div class="family-name">Herbal & Green</div>
+          <p class="family-notes">Rosemary, eucalyptus, mint, basil. Fresh, clarifying, spa-like.</p>
+        </div>
+        <div class="family-card fade-up">
+          <span class="family-icon">🍂</span>
+          <div class="family-name">Warm & Spiced</div>
+          <p class="family-notes">Cinnamon, clove, cardamom, vanilla. Cosy, wintery, deeply comforting.</p>
+        </div>
+        <div class="family-card fade-up">
+          <span class="family-icon">💐</span>
+          <div class="family-name">Floral & Calm</div>
+          <p class="family-notes">Lavender, rose, jasmine, chamomile. Relaxing, romantic, bedroom-perfect.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="recipes-section">
+
+    <!-- SIMMER POTS -->
+    <div class="section-label">Simmer pots</div>
+    <h2 class="section-title">The simplest way to <em>scent a room</em></h2>
+    <p style="font-size:14px;font-weight:300;color:var(--muted);margin-bottom:2rem;max-width:560px;">Add ingredients to a small pot of water, heat on low until simmering, and your kitchen — and the whole house — fills with natural fragrance. Top up water as it evaporates.</p>
+
+    <div class="simmer-grid">
+      <div class="simmer-card fade-up">
+        <span class="simmer-season">🍂 Autumn & Winter</span>
+        <div class="simmer-name">Spiced Apple & Cinnamon</div>
+        <p class="simmer-desc">The most classic and comforting simmer pot — warm, sweet, and immediately homely.</p>
+        <div class="simmer-items"><span>+</span>Apple slices · Cinnamon sticks · Cloves · Star anise · Orange peel · Vanilla</div>
+      </div>
+      <div class="simmer-card fade-up">
+        <span class="simmer-season">🌸 Spring & Summer</span>
+        <div class="simmer-name">Citrus & Fresh Herb</div>
+        <p class="simmer-desc">Bright, clean, and invigorating. Perfect for the kitchen on a warm morning.</p>
+        <div class="simmer-items"><span>+</span>Lemon slices · Fresh rosemary · Lime peel · Mint leaves · Bay leaves</div>
+      </div>
+      <div class="simmer-card fade-up">
+        <span class="simmer-season">🎄 Festive</span>
+        <div class="simmer-name">Winter Spice Pot</div>
+        <p class="simmer-desc">Every spice that makes winter feel magical — simmered together into one deeply aromatic pot.</p>
+        <div class="simmer-items"><span>+</span>Orange peel · Cinnamon · Cardamom · Cloves · Nutmeg · Pine sprigs</div>
+      </div>
+    </div>
+
+    <!-- OTHER RECIPES -->
+    <div class="divider-label">More natural scent recipes</div>
+
+    <div class="recipe-grid">
+
+      <!-- Linen Spray -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Bedroom & Linen</span>
+          <h3 class="recipe-name">Lavender Linen Spray</h3>
+          <p class="recipe-desc">Mist over pillows, sheets, and curtains. Lavender is naturally calming — shown to improve sleep quality when inhaled before bed.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 2 mins</span>
+          <span class="meta-pill"><span>🫙</span> 3 months</span>
+          <span class="meta-pill"><span>⚡</span> Very easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>1 cup distilled water</li>
+            <li>2 tbsp rubbing alcohol or vodka</li>
+            <li>30 drops lavender essential oil</li>
+            <li>10 drops chamomile essential oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- Reed Diffuser -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Living Room</span>
+          <h3 class="recipe-name">DIY Reed Diffuser</h3>
+          <p class="recipe-desc">A constant, gentle fragrance for any room. Made with a carrier oil and essential oils — bamboo reeds do the diffusing for you.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins</span>
+          <span class="meta-pill"><span>🫙</span> 1–3 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>¼ cup sweet almond or safflower oil</li>
+            <li>3 tbsp rubbing alcohol</li>
+            <li>30–40 drops essential oils</li>
+            <li>Bamboo reed sticks</li>
+            <li>A narrow-neck glass bottle</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- Beeswax Candle -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Candles</span>
+          <h3 class="recipe-name">Beeswax Pillar Candles</h3>
+          <p class="recipe-desc">Beeswax burns cleaner than paraffin, releases negative ions that purify air, and has a natural honey scent. A beautiful, non-toxic alternative.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 30 mins + set time</span>
+          <span class="meta-pill"><span>🫙</span> Indefinite</span>
+          <span class="meta-pill"><span>⚡</span> Intermediate</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>500g pure beeswax pellets</li>
+            <li>Cotton wicks (pre-tabbed)</li>
+            <li>30 drops essential oil (optional)</li>
+            <li>Pillar mould or glass jar</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Intermediate</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="tip-section">
+    <div class="tip-inner fade-up">
+      <div class="tip-label">Simmer pot tip</div>
+      <p class="tip-text">"You can refrigerate or freeze your simmer pot ingredients between uses and reuse the same batch 3–5 times. When the fragrance fades, compost the ingredients — nothing goes to waste."</p>
+    </div>
+  </div>
+
+  <div data-include="footer"></div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

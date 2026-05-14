@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body & Skin Care Recipes · Make at Home · Sukara Living</title>
+  <meta name="description" content="Wholesome homemade body and skin care recipes — whipped body butter, sugar scrub, lip balm, face toner, lotion bars and more. Pure ingredients, no hidden chemicals.">
+  <link rel="canonical" href="https://www.sukaraliving.in/make-at-home/body-skin-care.html">
+  <link rel="icon" type="image/png" href="/sl-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="/includes.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F3EE; --parchment: #EDE8DF;
+      --sage-light: #B5C4A8; --sage-dark: #4A5E3E;
+      --terracotta: #C47B5A; --charcoal: #2C2C28;
+      --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: 0.04em; color: #7A7A72; margin-bottom: 1.4rem; }
+    .breadcrumb a { color: #7A7A72; text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: #4A5E3E; }
+    .bc-sep { color: #C8C5BC; }
+    .bc-current { color: #2C2C28; }
+
+    .page-hero { background: var(--parchment); border-bottom: 1px solid var(--border); padding: 56px 60px 52px; }
+    .page-hero-inner { max-width: 760px; }
+    .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
+    .eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 18px; }
+    .page-title em { font-style: italic; color: var(--sage-dark); }
+    .page-sub { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.8; }
+
+    .why-strip { background: var(--sage-dark); padding: 36px 60px; display: flex; gap: 48px; }
+    .why-item { flex: 1; }
+    .why-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+    .why-title { font-size: 13px; font-weight: 500; color: var(--sage-light); margin-bottom: 4px; }
+    .why-desc { font-size: 13px; font-weight: 300; color: rgba(247,243,238,0.65); line-height: 1.6; }
+
+    /* INTRO NOTE */
+    .intro-note { background: var(--white); border-bottom: 1px solid var(--border); padding: 40px 60px; }
+    .intro-inner { max-width: 760px; margin: 0 auto; border-left: 3px solid var(--terracotta); padding-left: 28px; }
+    .intro-inner p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.65; }
+
+    /* RECIPE GRID */
+    .recipes-section { max-width: 1120px; margin: 0 auto; padding: 64px 60px 100px; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 44px); font-weight: 300; line-height: 1.15; color: var(--charcoal); margin-bottom: 40px; }
+    .section-title em { font-style: italic; color: var(--sage-dark); }
+
+    .recipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .recipe-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+    .recipe-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(42,41,37,0.09); }
+    .recipe-card-top { padding: 1.5rem 1.5rem 0; }
+    .recipe-tag { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 0.5rem; }
+    .recipe-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; line-height: 1.25; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .recipe-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+
+    .recipe-meta { display: flex; gap: 12px; padding: 0.6rem 1.5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--cream); flex-wrap: wrap; }
+    .meta-pill { font-size: 11px; font-weight: 300; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+
+    .recipe-ingredients { padding: 1rem 1.5rem; flex: 1; }
+    .ing-label { font-size: 10.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.6rem; display: block; }
+    .ing-list { list-style: none; padding: 0; }
+    .ing-list li { font-size: 13px; font-weight: 300; color: var(--charcoal); padding: 4px 0; border-bottom: 1px dashed var(--border); display: flex; gap: 7px; }
+    .ing-list li:last-child { border-bottom: none; }
+    .ing-list li::before { content: '·'; color: var(--terracotta); font-size: 16px; line-height: 1.3; flex-shrink: 0; }
+
+    .skin-type-badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.75rem; }
+    .badge-all { background: #EDF2EB; color: #4A6940; }
+    .badge-dry { background: #F5EDE8; color: #8B4A2F; }
+    .badge-oily { background: #EAE8F0; color: #4A4570; }
+    .badge-sensitive { background: #F3EEE5; color: #7A5C2E; }
+
+    .recipe-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .recipe-cta { font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--sage-dark); cursor: pointer; }
+    .difficulty { font-size: 11px; color: var(--muted); }
+
+    .tip-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 60px; }
+    .tip-inner { max-width: 760px; margin: 0 auto; }
+    .tip-label { font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 12px; }
+    .tip-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.6; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .recipe-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-hero { padding: 48px 24px 40px; }
+      .recipes-section { padding: 48px 24px 72px; }
+      .why-strip { flex-direction: column; gap: 24px; padding: 32px 24px; }
+      .intro-note { padding: 32px 24px; }
+      .tip-section { padding: 40px 24px; }
+    }
+    @media (max-width: 580px) {
+      .recipe-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.sukaraliving.in/">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Body & Skin Care</span>
+      </nav>
+      <p class="eyebrow">Make at Home</p>
+      <h1 class="page-title">Body &amp; Skin Care <em>Recipes</em></h1>
+      <p class="page-sub">What goes on your skin goes into your body. These recipes use pure, simple ingredients — no parabens, no synthetic fragrance, no hormone disruptors hiding in a long ingredients list.</p>
+    </div>
+  </div>
+
+  <div class="why-strip">
+    <div class="why-item">
+      <span class="why-icon">🌿</span>
+      <div class="why-title">No hidden chemicals</div>
+      <p class="why-desc">Commercial skincare is full of parabens, phthalates, and synthetic fragrance — all linked to hormonal disruption. Yours won't have any of them.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">💧</span>
+      <div class="why-title">You know every ingredient</div>
+      <p class="why-desc">Shea butter, coconut oil, beeswax, essential oils — ingredients you can read, research, and trust completely.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">🎁</span>
+      <div class="why-title">Makes beautiful gifts</div>
+      <p class="why-desc">A jar of homemade whipped body butter or a set of lip balms is one of the most thoughtful and personal gifts you can give.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">✂️</span>
+      <div class="why-title">Tailored to your skin</div>
+      <p class="why-desc">Adjust carrier oils, add specific essential oils, increase or reduce beeswax — every recipe adapts to your skin type and preferences.</p>
+    </div>
+  </div>
+
+  <div class="intro-note">
+    <div class="intro-inner fade-up">
+      <p>"Most of these can be made in less time than it takes to prepare dinner. There's not much involved beyond measuring, melting, and pouring. If you've been putting it off thinking it's complicated — it genuinely isn't."</p>
+    </div>
+  </div>
+
+  <section class="recipes-section">
+    <div class="section-label">9 recipes</div>
+    <h2 class="section-title">Skin care worth <em>making yourself</em></h2>
+
+    <div class="recipe-grid">
+
+      <!-- 1. Whipped Body Butter -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-dry">Best for: Dry skin</span>
+          <span class="recipe-tag">Body</span>
+          <h3 class="recipe-name">Whipped Shea Body Butter</h3>
+          <p class="recipe-desc">Rich, whipped, and deeply moisturising. Melts into skin without feeling greasy — the most requested homemade body care recipe.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 20 mins</span>
+          <span class="meta-pill"><span>🫙</span> 2 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>½ cup raw shea butter</li>
+            <li>¼ cup coconut oil</li>
+            <li>¼ cup almond or jojoba oil</li>
+            <li>10 drops lavender essential oil</li>
+            <li>5 drops vitamin E oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 2. Coffee Sugar Scrub -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-all">Best for: All skin types</span>
+          <span class="recipe-tag">Body</span>
+          <h3 class="recipe-name">Coffee Sugar Body Scrub</h3>
+          <p class="recipe-desc">Exfoliates, improves circulation, and smells incredible. Coffee grounds and sugar slough off dead skin; coconut oil moisturises as you rinse.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins</span>
+          <span class="meta-pill"><span>🫙</span> 2 weeks</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>½ cup used coffee grounds</li>
+            <li>¼ cup brown sugar</li>
+            <li>¼ cup coconut oil, melted</li>
+            <li>1 tsp vanilla extract</li>
+            <li>Pinch of cinnamon</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 3. Lotion Bars -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-dry">Best for: Dry & rough skin</span>
+          <span class="recipe-tag">Body</span>
+          <h3 class="recipe-name">Simple Lotion Bars</h3>
+          <p class="recipe-desc">Solid moisturising bars that melt on contact with skin. No water, no preservatives, no mess — just butter, wax, and oil in equal parts.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 30 mins + set time</span>
+          <span class="meta-pill"><span>🫙</span> 6 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>⅓ cup beeswax pellets</li>
+            <li>⅓ cup cocoa butter</li>
+            <li>⅓ cup coconut oil</li>
+            <li>15 drops essential oil of choice</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 4. Lavender Salve -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-sensitive">Best for: Sensitive & irritated skin</span>
+          <span class="recipe-tag">Face & Body</span>
+          <h3 class="recipe-name">Lovely Lavender Salve</h3>
+          <p class="recipe-desc">A versatile healing balm for dry patches, chapped lips, irritated skin, and minor cuts. Lavender is naturally calming and antimicrobial.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 20 mins + set time</span>
+          <span class="meta-pill"><span>🫙</span> 12 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>¼ cup olive oil or almond oil</li>
+            <li>1 tbsp beeswax pellets</li>
+            <li>20 drops lavender essential oil</li>
+            <li>5 drops tea tree oil (optional)</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 5. Body Oil -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-all">Best for: All skin types</span>
+          <span class="recipe-tag">Body</span>
+          <h3 class="recipe-name">Luxurious Body Oil</h3>
+          <p class="recipe-desc">Made in five minutes. No heat required. Apply after a shower while skin is still slightly damp for maximum absorption and a natural glow.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins</span>
+          <span class="meta-pill"><span>🫙</span> 3–4 months</span>
+          <span class="meta-pill"><span>⚡</span> Very easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>½ cup jojoba oil</li>
+            <li>¼ cup sweet almond oil</li>
+            <li>¼ cup rosehip oil</li>
+            <li>20 drops essential oil blend</li>
+            <li>5 drops vitamin E oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 6. Lip Balm -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-all">Best for: All</span>
+          <span class="recipe-tag">Face</span>
+          <h3 class="recipe-name">Beeswax Lip Balm</h3>
+          <p class="recipe-desc">Three ingredients, poured into tubes or little pots. Protects and heals chapped lips without petroleum or synthetic flavour.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 15 mins + set time</span>
+          <span class="meta-pill"><span>🫙</span> 12 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>2 tbsp beeswax pellets</li>
+            <li>2 tbsp coconut oil</li>
+            <li>1 tbsp shea butter</li>
+            <li>5 drops peppermint or vanilla oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 7. Rose Face Toner -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-sensitive">Best for: Dry & sensitive skin</span>
+          <span class="recipe-tag">Face</span>
+          <h3 class="recipe-name">Rose Water Face Toner</h3>
+          <p class="recipe-desc">A minimal, two-ingredient toner that balances skin's pH, tightens pores, and leaves your face feeling calm and refreshed.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 2 mins</span>
+          <span class="meta-pill"><span>🫙</span> 2 weeks (refrigerated)</span>
+          <span class="meta-pill"><span>⚡</span> Very easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>½ cup pure rose water</li>
+            <li>½ cup witch hazel (alcohol-free)</li>
+            <li>5 drops rose hip seed oil</li>
+            <li>3 drops lavender essential oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 8. Hair Oil -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-dry">Best for: Dry & damaged hair</span>
+          <span class="recipe-tag">Hair</span>
+          <h3 class="recipe-name">Nourishing Hair Oil</h3>
+          <p class="recipe-desc">An Ayurvedic-inspired blend of coconut and castor oil with amla and bhringraj — deeply conditions hair and supports scalp health.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 10 mins</span>
+          <span class="meta-pill"><span>🫙</span> 3 months</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>½ cup cold-pressed coconut oil</li>
+            <li>2 tbsp castor oil</li>
+            <li>1 tbsp amla oil</li>
+            <li>5 drops rosemary essential oil</li>
+            <li>5 drops peppermint essential oil</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+      <!-- 9. Turmeric Face Mask -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="skin-type-badge badge-oily">Best for: Oily & acne-prone skin</span>
+          <span class="recipe-tag">Face</span>
+          <h3 class="recipe-name">Turmeric Glow Face Mask</h3>
+          <p class="recipe-desc">A traditional kitchen-to-face treatment. Turmeric brightens and reduces inflammation; honey locks in moisture and fights bacteria.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins + 15 min mask</span>
+          <span class="meta-pill"><span>🫙</span> Make fresh each time</span>
+          <span class="meta-pill"><span>⚡</span> Very easy</span>
+        </div>
+        <div class="recipe-ingredients">
+          <span class="ing-label">Ingredients</span>
+          <ul class="ing-list">
+            <li>1 tsp turmeric powder</li>
+            <li>1 tbsp raw honey</li>
+            <li>1 tsp plain curd / yoghurt</li>
+            <li>A few drops of lemon juice</li>
+          </ul>
+        </div>
+        <div class="recipe-footer">
+          <span class="recipe-cta">Full recipe →</span>
+          <span class="difficulty">Beginner</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="tip-section">
+    <div class="tip-inner fade-up">
+      <div class="tip-label">Before you begin</div>
+      <p class="tip-text">"Always do a small patch test before applying any new homemade product to your face or body. Even natural ingredients can cause reactions in some people. Apply a small amount to your inner wrist and wait 24 hours before using widely."</p>
+    </div>
+  </div>
+
+  <div data-include="footer"></div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Home Cleaning Products · Make at Home · Sukara Living</title>
+  <meta name="description" content="Replace every harsh chemical cleaner with these simple, non-toxic homemade recipes — disinfectant spray, cleaning paste, dish soap, oven cleaner and more.">
+  <link rel="canonical" href="https://www.sukaraliving.in/make-at-home/home-cleaning.html">
+  <link rel="icon" type="image/png" href="/sl-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="/includes.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F3EE; --parchment: #EDE8DF;
+      --sage-light: #B5C4A8; --sage-dark: #4A5E3E;
+      --terracotta: #C47B5A; --charcoal: #2C2C28;
+      --muted: #7A7A72; --border: #D8D0C4; --white: #FDFCFA;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: 0.04em; color: #7A7A72; margin-bottom: 1.4rem; }
+    .breadcrumb a { color: #7A7A72; text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: #4A5E3E; }
+    .bc-sep { color: #C8C5BC; }
+    .bc-current { color: #2C2C28; }
+
+    .page-hero { background: var(--parchment); border-bottom: 1px solid var(--border); padding: 56px 60px 52px; }
+    .page-hero-inner { max-width: 760px; }
+    .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
+    .eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 64px); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: 18px; }
+    .page-title em { font-style: italic; color: var(--sage-dark); }
+    .page-sub { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.8; }
+
+    .why-strip { background: var(--sage-dark); padding: 36px 60px; display: flex; gap: 48px; }
+    .why-item { flex: 1; }
+    .why-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+    .why-title { font-size: 13px; font-weight: 500; color: var(--sage-light); margin-bottom: 4px; }
+    .why-desc { font-size: 13px; font-weight: 300; color: rgba(247,243,238,0.65); line-height: 1.6; }
+
+    /* INGREDIENTS GLOSSARY */
+    .glossary { background: var(--white); border-bottom: 1px solid var(--border); padding: 52px 60px; }
+    .glossary-inner { max-width: 1120px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; width: 36px; height: 1px; background: var(--terracotta); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 300; line-height: 1.15; color: var(--charcoal); margin-bottom: 32px; }
+    .section-title em { font-style: italic; color: var(--sage-dark); }
+    .glossary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .glossary-card { background: var(--cream); border: 1px solid var(--border); border-top: 3px solid var(--sage-dark); padding: 1.25rem 1.25rem 1.4rem; }
+    .g-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .g-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; }
+
+    /* RECIPE GRID */
+    .recipes-section { max-width: 1120px; margin: 0 auto; padding: 64px 60px 100px; }
+    .recipe-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+    .recipe-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+    .recipe-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(42,41,37,0.09); }
+    .recipe-card-top { padding: 1.75rem 1.75rem 0; }
+    .recipe-tag { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 0.5rem; }
+    .recipe-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; line-height: 1.25; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .recipe-desc { font-size: 13.5px; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+
+    .recipe-meta { display: flex; gap: 16px; padding: 0.75rem 1.75rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--cream); flex-wrap: wrap; }
+    .meta-pill { font-size: 11px; font-weight: 300; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+
+    /* TWO COLUMN LAYOUT FOR INGREDIENTS + STEPS */
+    .recipe-body { padding: 1.5rem 1.75rem; flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .ing-col, .steps-col {}
+    .col-label { font-size: 10.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.6rem; display: block; }
+    .ing-list { list-style: none; padding: 0; }
+    .ing-list li { font-size: 13px; font-weight: 300; color: var(--charcoal); padding: 4px 0; border-bottom: 1px dashed var(--border); display: flex; gap: 7px; }
+    .ing-list li:last-child { border-bottom: none; }
+    .ing-list li::before { content: '·'; color: var(--terracotta); font-size: 16px; line-height: 1.3; flex-shrink: 0; }
+    .steps-list { list-style: none; padding: 0; counter-reset: steps; }
+    .steps-list li { font-size: 13px; font-weight: 300; color: var(--charcoal); padding: 5px 0 5px 22px; border-bottom: 1px dashed var(--border); position: relative; line-height: 1.55; }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before { counter-increment: steps; content: counter(steps); position: absolute; left: 0; top: 6px; font-size: 10px; font-weight: 500; color: var(--terracotta); }
+
+    .recipe-footer { padding: 1rem 1.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .recipe-cta { font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--sage-dark); cursor: pointer; }
+    .safety-note { font-size: 11px; color: var(--muted); font-style: italic; }
+
+    .tip-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 60px; }
+    .tip-inner { max-width: 760px; margin: 0 auto; }
+    .tip-label { font-size: 11px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 12px; }
+    .tip-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--charcoal); line-height: 1.6; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .recipe-grid { grid-template-columns: 1fr; }
+      .recipe-body { grid-template-columns: 1fr; }
+      .glossary-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-hero { padding: 48px 24px 40px; }
+      .recipes-section, .glossary { padding: 48px 24px 60px; }
+      .why-strip { flex-direction: column; gap: 24px; padding: 32px 24px; }
+      .tip-section { padding: 40px 24px; }
+    }
+    @media (max-width: 580px) {
+      .glossary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.sukaraliving.in/">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Home Cleaning</span>
+      </nav>
+      <p class="eyebrow">Make at Home</p>
+      <h1 class="page-title">Natural Home <em>Cleaning Products</em></h1>
+      <p class="page-sub">Every spray, scrub, and liquid in this list replaces a harsh chemical cleaner — with ingredients that are safer for your family, your surfaces, and the planet.</p>
+    </div>
+  </div>
+
+  <div class="why-strip">
+    <div class="why-item">
+      <span class="why-icon">🌱</span>
+      <div class="why-title">No harsh chemicals</div>
+      <p class="why-desc">Conventional cleaners contain VOCs and hormone disruptors that linger on surfaces and in the air you breathe at home.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">♻️</span>
+      <div class="why-title">Zero plastic waste</div>
+      <p class="why-desc">Use glass spray bottles and reusable containers — no single-use plastic bottle thrown out every month.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">💰</span>
+      <div class="why-title">Dramatically cheaper</div>
+      <p class="why-desc">Vinegar, baking soda, and castile soap cost a fraction of branded cleaners and make ten times the product.</p>
+    </div>
+    <div class="why-item">
+      <span class="why-icon">✅</span>
+      <div class="why-title">Actually works</div>
+      <p class="why-desc">White vinegar, baking soda, and essential oils have proven antimicrobial and degreasing properties — not just marketing claims.</p>
+    </div>
+  </div>
+
+  <!-- INGREDIENTS GLOSSARY -->
+  <div class="glossary">
+    <div class="glossary-inner">
+      <div class="section-label">Know your ingredients</div>
+      <h2 class="section-title">What you'll <em>use throughout</em></h2>
+      <div class="glossary-grid">
+        <div class="glossary-card fade-up">
+          <div class="g-name">Distilled White Vinegar</div>
+          <p class="g-desc">A natural disinfectant and deodoriser. Its acidity fights bacteria effectively on most surfaces. Do not use on marble or natural stone.</p>
+        </div>
+        <div class="glossary-card fade-up">
+          <div class="g-name">Baking Soda</div>
+          <p class="g-desc">A gentle abrasive that lifts grime and neutralises odours without scratching surfaces. Works especially well in paste form.</p>
+        </div>
+        <div class="glossary-card fade-up">
+          <div class="g-name">Castile Soap / Sal Suds</div>
+          <p class="g-desc">Plant-based soap that cuts through grease and provides the cleaning action in liquid dish soap and surface sprays.</p>
+        </div>
+        <div class="glossary-card fade-up">
+          <div class="g-name">Distilled Water</div>
+          <p class="g-desc">For recipes you want to store longer than two weeks — distilled water has no minerals or impurities that shorten shelf life.</p>
+        </div>
+        <div class="glossary-card fade-up">
+          <div class="g-name">Rubbing Alcohol / Vodka</div>
+          <p class="g-desc">Adds disinfecting power to sprays. Helps ingredients blend and evaporates quickly without streaking on glass.</p>
+        </div>
+        <div class="glossary-card fade-up">
+          <div class="g-name">Essential Oils</div>
+          <p class="g-desc">Tea tree oil is antimicrobial. Citrus oils cut grease. Lavender deodorises. Always check safety if you have pets at home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECIPES -->
+  <section class="recipes-section">
+    <div class="section-label">7 recipes</div>
+    <h2 class="section-title">Cleaners worth <em>making yourself</em></h2>
+
+    <div class="recipe-grid">
+
+      <!-- 1. Disinfectant Spray -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Surfaces & Counters</span>
+          <h3 class="recipe-name">All-Purpose Disinfectant Spray</h3>
+          <p class="recipe-desc">A simple daily spray for kitchen counters, bathroom surfaces, and door handles. Ready in two minutes.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 2 mins</span>
+          <span class="meta-pill"><span>🫙</span> Stores 3–4 weeks</span>
+          <span class="meta-pill"><span>🧴</span> Makes 500ml</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>1 cup distilled water</li>
+              <li>½ cup distilled white vinegar</li>
+              <li>¼ cup rubbing alcohol (70%)</li>
+              <li>15 drops tea tree oil</li>
+              <li>10 drops lemon essential oil</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Combine all ingredients in a glass spray bottle</li>
+              <li>Attach the spray nozzle and shake gently to mix</li>
+              <li>Spray on surfaces and wipe with a clean cloth</li>
+              <li>Allow to air dry — no rinsing needed</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">⚠ Not for marble or natural stone</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 2. Cleaning Paste -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Scrubbing & Deep Clean</span>
+          <h3 class="recipe-name">All-Purpose Cleaning Paste</h3>
+          <p class="recipe-desc">A thick, gentle abrasive paste for sinks, taps, grout, and stovetops. Lifts grime that sprays can't touch.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins</span>
+          <span class="meta-pill"><span>🫙</span> Stores 1 month</span>
+          <span class="meta-pill"><span>🧴</span> Makes 1 jar</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>1 cup baking soda</li>
+              <li>¼ cup liquid castile soap</li>
+              <li>10 drops tea tree oil</li>
+              <li>10 drops lemon oil</li>
+              <li>Water to adjust consistency</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Mix baking soda and castile soap in a bowl</li>
+              <li>Add essential oils and stir to combine</li>
+              <li>Add water a teaspoon at a time to reach a thick paste</li>
+              <li>Store in a wide-mouth jar with a lid</li>
+              <li>Apply with a damp cloth or sponge, scrub, rinse</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ Safe on most surfaces</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 3. Glass Cleaner -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Glass & Mirrors</span>
+          <h3 class="recipe-name">Streak-Free Glass Cleaner</h3>
+          <p class="recipe-desc">Leaves windows and mirrors sparkling without the blue chemical smell. The alcohol is key — it evaporates fast and prevents streaking.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 2 mins</span>
+          <span class="meta-pill"><span>🫙</span> Stores 2 months</span>
+          <span class="meta-pill"><span>🧴</span> Makes 500ml</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>1 cup distilled water</li>
+              <li>1 cup rubbing alcohol (70%)</li>
+              <li>1 tbsp white vinegar</li>
+              <li>5 drops peppermint oil (optional)</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Combine all ingredients in a glass spray bottle</li>
+              <li>Shake gently before each use</li>
+              <li>Spray directly onto glass surface</li>
+              <li>Wipe with a microfibre cloth in circular motions</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ Windows, mirrors, screens</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 4. Liquid Dish Soap -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Kitchen</span>
+          <h3 class="recipe-name">Homemade Liquid Dish Soap</h3>
+          <p class="recipe-desc">A lemon-scented dish soap that cuts through grease without drying your hands. Based on Sal Suds and white vinegar.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 10 mins</span>
+          <span class="meta-pill"><span>🫙</span> Stores 1 month</span>
+          <span class="meta-pill"><span>🧴</span> Makes 350ml</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>½ cup warm distilled water</li>
+              <li>2 tsp kosher salt</li>
+              <li>½ cup white vinegar</li>
+              <li>½ cup Dr. Bronner's Sal Suds</li>
+              <li>1 tsp lemon juice</li>
+              <li>10–15 drops lemon essential oil</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Dissolve salt completely in warm water</li>
+              <li>In a separate bowl, combine vinegar, Sal Suds, and lemon juice</li>
+              <li>Stir vinegar mixture into salt water until thickened</li>
+              <li>Add essential oil and stir</li>
+              <li>Pour into a recycled dish soap container</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ Gentle on hands</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 5. Dishwasher Detergent -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Kitchen</span>
+          <h3 class="recipe-name">Homemade Dishwasher Detergent</h3>
+          <p class="recipe-desc">A dry powder detergent that uses only 2 tablespoons per load — making each batch last a very long time.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins</span>
+          <span class="meta-pill"><span>🫙</span> Stores 6+ months</span>
+          <span class="meta-pill"><span>🧴</span> 60+ loads</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>1 cup salt</li>
+              <li>2 cups baking soda</li>
+              <li>2 cups Borax</li>
+              <li>1 cup Lemi-Shine</li>
+              <li>White vinegar (for rinse aid compartment)</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Mix all dry ingredients together in a large bowl</li>
+              <li>Transfer to an airtight container</li>
+              <li>Use 2 tablespoons per dishwasher load</li>
+              <li>Keep white vinegar in the rinse aid compartment</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ Non-toxic, long shelf life</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 6. Oven Cleaner -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Kitchen</span>
+          <h3 class="recipe-name">Homemade Oven Cleaner</h3>
+          <p class="recipe-desc">No fumes. No gloves. Just baking soda, water, and vinegar — left overnight to do the work so you barely have to scrub.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 15 mins + overnight</span>
+          <span class="meta-pill"><span>🫙</span> Make fresh each time</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>½ cup baking soda</li>
+              <li>2–3 tbsp water</li>
+              <li>½ cup white vinegar (in spray bottle)</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Mix baking soda and water into a spreadable paste</li>
+              <li>Spread all over oven walls and door</li>
+              <li>Leave overnight (8–12 hours)</li>
+              <li>Spray vinegar over baking soda — it will foam</li>
+              <li>Wipe clean with a damp cloth; rinse thoroughly</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ No toxic fumes</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+      <!-- 7. Drain Cleaner -->
+      <div class="recipe-card fade-up">
+        <div class="recipe-card-top">
+          <span class="recipe-tag">Drains & Pipes</span>
+          <h3 class="recipe-name">Natural Drain Cleaner</h3>
+          <p class="recipe-desc">Unclogs and deodorises slow drains with just baking soda and vinegar — no harsh chemicals that corrode your pipes over time.</p>
+        </div>
+        <div class="recipe-meta">
+          <span class="meta-pill"><span>⏱</span> 5 mins + 1 hr wait</span>
+          <span class="meta-pill"><span>🫙</span> Make fresh each time</span>
+          <span class="meta-pill"><span>⚡</span> Easy</span>
+        </div>
+        <div class="recipe-body">
+          <div class="ing-col">
+            <span class="col-label">Ingredients</span>
+            <ul class="ing-list">
+              <li>¼–½ cup baking soda</li>
+              <li>¼ cup white vinegar</li>
+              <li>Boiling water (to finish)</li>
+            </ul>
+          </div>
+          <div class="steps-col">
+            <span class="col-label">Method</span>
+            <ol class="steps-list">
+              <li>Pour baking soda directly down the drain</li>
+              <li>Follow immediately with white vinegar</li>
+              <li>Let the bubbling mixture sit for 1 hour</li>
+              <li>Flush with a full kettle of boiling water</li>
+              <li>Repeat if needed for very stubborn clogs</li>
+            </ol>
+          </div>
+        </div>
+        <div class="recipe-footer">
+          <span class="safety-note">✓ Safe for all pipe types</span>
+          <span class="recipe-cta">Full recipe →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="tip-section">
+    <div class="tip-inner fade-up">
+      <div class="tip-label">Important note</div>
+      <p class="tip-text">"Never mix vinegar and castile soap directly — the acid deactivates the soap and leaves a curdled mess. Always use them separately or in recipes specifically designed to combine them (like the dish soap above, where salt stabilises the mixture)."</p>
+    </div>
+  </div>
+
+  <div data-include="footer"></div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
