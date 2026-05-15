@@ -681,8 +681,8 @@
 
       <!-- Body & Skin Care -->
       <a href="https://www.sukaraliving.in/make-at-home/body-skin-care.html" class="mah-card">
-        <div class="mah-card-img" style="background:linear-gradient(135deg,#E8D5C4,#C4B8A8);">
-          <span class="mah-card-emoji">🧴</span>
+        <div class="mah-card-img">
+          <img src="/make-at-home/body-recipes.webp" alt="Homemade body and skincare products">
         </div>
         <div class="mah-card-body">
           <span class="mah-tag">Body & Skin Care</span>
@@ -699,8 +699,8 @@
 
       <!-- Daily Cooking Staples -->
       <a href="https://www.sukaraliving.in/make-at-home/daily-cooking-staples.html" class="mah-card">
-        <div class="mah-card-img" style="background:linear-gradient(135deg,#D4C9A8,#C4B898);">
-          <span class="mah-card-emoji">🫙</span>
+        <div class="mah-card-img">
+          <img src="/make-at-home/pantry-staples.webp" alt="Homemade pantry staples">
         </div>
         <div class="mah-card-body">
           <span class="mah-tag">Daily Cooking Staples</span>
@@ -746,7 +746,13 @@
       height: 200px; display: flex;
       align-items: center; justify-content: center;
     }
-    .mah-card-emoji { font-size: 64px; }
+    .mah-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+    
     .mah-card-body { padding: 2rem; display: flex; flex-direction: column; }
     .mah-tag {
       font-size: 10.5px; font-weight: 500; letter-spacing: .12em;
