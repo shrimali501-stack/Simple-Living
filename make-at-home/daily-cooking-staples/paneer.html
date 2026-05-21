@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homemade Fresh Paneer Recipe · Sukara Living</title>
+  <meta name="description" content="Make your own fresh paneer at home with just milk and lemon juice — softer, fresher, and better than any packet. Ready in 20 minutes.">
+  <link rel="canonical" href="https://www.sukaraliving.in/make-at-home/daily-cooking-staples/paneer.html">
+  <link rel="icon" type="image/png" href="/sl-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="/includes.js" defer></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.04em;color:#7A7A72;margin-bottom:1.6rem;flex-wrap:wrap}
+    .breadcrumb a{color:#7A7A72;text-decoration:none;transition:color .2s}
+    .breadcrumb a:hover{color:#4A5E3E}
+    .bc-sep{color:#C8C5BC}.bc-current{color:#2C2C28}
+    /* SPLIT HERO */
+    .recipe-hero{background:var(--parchment);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;min-height:460px}
+    .hero-text{padding:52px 60px 52px;display:flex;flex-direction:column;justify-content:center}
+    .hero-image{position:relative;overflow:hidden}
+    .hero-image-placeholder{width:100%;height:100%;min-height:460px;display:flex;align-items:center;justify-content:center;font-size:96px;background:linear-gradient(135deg,#F0E8D8,#D8C8A8)}
+    .category-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:1rem;background:#F3EEE5;color:#7A5C2E}
+    .eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+    .eyebrow::after{content:'';width:32px;height:1px;background:var(--terracotta)}
+    .recipe-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,54px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:16px}
+    .recipe-title em{font-style:italic;color:var(--sage-dark)}
+    .recipe-intro{font-size:16px;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:28px;max-width:480px}
+    .quick-stats{display:flex;gap:0;border:1px solid var(--border);background:var(--white);max-width:440px}
+    .stat{flex:1;padding:14px 16px;border-right:1px solid var(--border)}
+    .stat:last-child{border-right:none}
+    .stat-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
+    .stat-value{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--charcoal);line-height:1.2}
+    /* BODY */
+    .recipe-body{max-width:1120px;margin:0 auto;padding:64px 60px 100px;display:grid;grid-template-columns:300px 1fr;gap:4rem;align-items:start}
+    .recipe-sidebar{position:sticky;top:100px}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);padding:1.6rem;margin-bottom:1.2rem}
+    .sidebar-title{font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);display:block}
+    .ing-list{list-style:none;padding:0}
+    .ing-list li{font-size:13.5px;font-weight:300;color:var(--charcoal);padding:7px 0;border-bottom:1px dashed var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:10px;line-height:1.4}
+    .ing-list li:last-child{border-bottom:none}
+    .ing-amount{font-size:12.5px;color:var(--terracotta);font-weight:500;white-space:nowrap;flex-shrink:0}
+    .storage-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--border)}
+    .storage-item:last-child{border-bottom:none}
+    .storage-icon{font-size:15px;flex-shrink:0;margin-top:2px}
+    .storage-text{font-size:13px;font-weight:300;color:var(--charcoal);line-height:1.5}
+    .storage-text strong{font-weight:500;display:block;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+    /* MAIN */
+    .section-eyebrow{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px;display:block}
+    .section-heading{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--charcoal);margin-bottom:1.5rem;line-height:1.2}
+    .section-heading em{font-style:italic;color:var(--sage-dark)}
+    .steps-list{list-style:none;padding:0;margin-bottom:2.5rem}
+    .step{display:flex;gap:1.25rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
+    .step:last-child{border-bottom:none}
+    .step-num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:var(--terracotta);line-height:1;flex-shrink:0;width:34px;text-align:right;padding-top:2px}
+    .step-content{flex:1}
+    .step-title{font-size:13.5px;font-weight:500;color:var(--charcoal);margin-bottom:4px}
+    .step-desc{font-size:14.5px;font-weight:300;color:var(--charcoal);line-height:1.75}
+    .tip-box{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--sage-dark);padding:1.2rem 1.4rem;margin:2rem 0}
+    .tip-box-label{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:6px;display:block}
+    .tip-box p{font-size:14px;font-weight:300;color:var(--charcoal);line-height:1.7;margin:0}
+    .uses-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:1.5rem 0 2.5rem}
+    .use-item{background:var(--white);border:1px solid var(--border);padding:.8rem 1rem;font-size:13px;font-weight:300;color:var(--charcoal);display:flex;gap:10px;align-items:center;line-height:1.45}
+    .use-item::before{content:'✦';color:var(--terracotta);font-size:10px;flex-shrink:0}
+    .variations{background:var(--parchment);border:1px solid var(--border);padding:1.4rem;margin:2rem 0}
+    .var-label{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.75rem;display:block}
+    .var-list{list-style:none;padding:0}
+    .var-list li{font-size:13.5px;font-weight:300;color:var(--charcoal);padding:5px 0;display:flex;gap:10px;line-height:1.55}
+    .var-list li::before{content:'→';color:var(--terracotta);flex-shrink:0;font-size:13px;margin-top:1px}
+    /* RELATED */
+    .related{background:var(--white);border-top:1px solid var(--border);padding:60px}
+    .related-inner{max-width:1120px;margin:0 auto}
+    .related-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+    .related-label::after{content:'';width:36px;height:1px;background:var(--terracotta)}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .related-card{text-decoration:none;color:inherit;background:var(--cream);border:1px solid var(--border);padding:1.25rem;display:block;transition:transform .2s,box-shadow .2s}
+    .related-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(42,41,37,.08)}
+    .related-tag{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);display:block;margin-bottom:6px}
+    .related-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--charcoal);margin-bottom:4px;line-height:1.3}
+    .related-desc{font-size:12px;font-weight:300;color:var(--muted);line-height:1.55}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:960px){
+      .recipe-hero{grid-template-columns:1fr}
+      .hero-image-placeholder{min-height:260px}
+      .hero-text{padding:40px 24px 36px}
+      .quick-stats{max-width:100%}
+      .recipe-body{grid-template-columns:1fr;gap:2rem;padding:40px 24px 72px}
+      .recipe-sidebar{position:static}
+      .related{padding:48px 24px}
+      .related-grid{grid-template-columns:repeat(2,1fr)}
+      .uses-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:580px){
+      .quick-stats{flex-wrap:wrap}
+      .stat{border-right:none;border-bottom:1px solid var(--border);flex:1 1 40%}
+      .related-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div data-include="nav"></div>
+  <div class="recipe-hero">
+    <div class="hero-text">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.sukaraliving.in/">Home</a><span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a><span class="bc-sep">›</span>
+        <a href="https://www.sukaraliving.in/make-at-home/daily-cooking-staples.html">Daily Cooking Staples</a><span class="bc-sep">›</span>
+        <span class="bc-current">Fresh Paneer</span>
+      </nav>
+      <span class="category-badge">Indian Essential</span>
+      <p class="eyebrow">Daily Cooking Staples</p>
+      <h1 class="recipe-title">Fresh <em>Paneer</em></h1>
+      <p class="recipe-intro">Soft, fresh paneer made in twenty minutes with just full-fat milk and an acid. Firmer than anything in a vacuum pack, without the preservative aftertaste, and you control exactly how soft or firm it sets.</p>
+      <div class="quick-stats">
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">5 mins</span></div>
+        <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">15 mins</span></div>
+        <div class="stat"><span class="stat-label">Makes</span><span class="stat-value">~250g</span></div>
+        <div class="stat"><span class="stat-label">Stores</span><span class="stat-value">4 days refrigerated</span></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-placeholder">🧀</div>
+    </div>
+  </div>
+  <div class="recipe-body">
+    <aside class="recipe-sidebar">
+      <div class="sidebar-card fade-up">
+        <span class="sidebar-title">Ingredients</span>
+        <ul class="ing-list"><li><span class="ing-name">Full-fat milk</span><span class="ing-amount">2 litres</span></li><li><span class="ing-name">Lemon juice or white vinegar</span><span class="ing-amount">3–4 tbsp</span></li><li><span class="ing-name">Salt (optional)</span><span class="ing-amount">½ tsp</span></li></ul>
+      </div>
+      <div class="sidebar-card fade-up">
+        <span class="sidebar-title">Storage</span>
+        <div class="storage-item"><span class="storage-icon">❄️</span><div class="storage-text"><strong>Refrigerate</strong>Submerged in cold water in a covered container — change water daily</div></div><div class="storage-item"><span class="storage-icon">📅</span><div class="storage-text"><strong>Shelf life</strong>3–4 days refrigerated. Freeze for up to 1 month</div></div><div class="storage-item"><span class="storage-icon">🧊</span><div class="storage-text"><strong>Freezing</strong>Cut into cubes, freeze on a tray, then bag. Frozen paneer has a slightly firmer, chewier texture — ideal for curries</div></div><div class="storage-item"><span class="storage-icon">💡</span><div class="storage-text"><strong>Freshness test</strong>Fresh paneer should smell of clean milk. Discard if it smells sour</div></div>
+      </div>
+    </aside>
+    <main class="recipe-main">
+      <span class="section-eyebrow">Method</span>
+      <h2 class="section-heading">How to <em>make it</em></h2>
+      <ol class="steps-list"><li class="step fade-up"><span class="step-num">1</span><div class="step-content"><div class="step-title">Heat milk to just below boiling</div><p class="step-desc">Pour milk into a heavy pot and heat on medium, stirring occasionally to prevent scorching. Heat until the milk is steaming and just beginning to bubble at the edges — about 90°C. Do not let it boil hard.</p></div></li><li class="step fade-up"><span class="step-num">2</span><div class="step-content"><div class="step-title">Add acid gradually while stirring</div><p class="step-desc">Reduce heat to low. Add lemon juice or vinegar one tablespoon at a time, stirring gently after each addition. You will see the milk curdle and separate into white curds and yellowish-green whey within 1–2 minutes.</p></div></li><li class="step fade-up"><span class="step-num">3</span><div class="step-content"><div class="step-title">Stop adding acid when whey runs clear</div><p class="step-desc">Add only enough acid to fully separate the milk. The whey should be a clear yellowish-green — not milky. Over-acidifying makes paneer crumbly and sour. If the whey is still milky, add one more tablespoon of acid.</p></div></li><li class="step fade-up"><span class="step-num">4</span><div class="step-content"><div class="step-title">Let curds rest for 2 minutes</div><p class="step-desc">Turn off the heat and allow the curds to firm up slightly for 2 minutes undisturbed. This resting time makes the paneer easier to drain and gives it a better texture.</p></div></li><li class="step fade-up"><span class="step-num">5</span><div class="step-content"><div class="step-title">Drain through muslin</div><p class="step-desc">Line a colander with muslin cloth. Gently pour the curds and whey through. The whey drains away — save it for kneading roti dough or adding to dal.</p></div></li><li class="step fade-up"><span class="step-num">6</span><div class="step-content"><div class="step-title">Press to your preferred firmness</div><p class="step-desc">Gather the muslin corners, twist to squeeze out excess whey, and press the bundle: 15 minutes with a light weight for soft paneer; 45–60 minutes with a heavy pot on top for firm, cuttable paneer. Refrigerate in cold water once set.</p></div></li></ol>
+      <div class="tip-box fade-up"><span class="tip-box-label">Save the whey — do not discard it</span><p>The yellowish-green liquid left after draining paneer is whey — rich in protein, B vitamins, and lactic acid. Use it instead of water to knead roti or paratha dough (the rotis will be softer and more nutritious). Add it to dal or rice cooking water. Use it to water plants — they love the nutrients. It keeps in the fridge for 3–4 days.</p></div>
+      <span class="section-eyebrow">Use it in</span>
+      <h2 class="section-heading">Ways to <em>use it</em></h2>
+      <div class="uses-grid fade-up"><div class="use-item">Palak paneer & mutter paneer</div><div class="use-item">Paneer tikka & paneer bhurji</div><div class="use-item">Paneer paratha filling</div><div class="use-item">Grilled with spices</div><div class="use-item">Crumbled into sabzis</div><div class="use-item">Eaten fresh with honey</div><div class="use-item">Paneer pulao</div><div class="use-item">Added to sandwiches and wraps</div></div>
+      <div class="variations fade-up"><span class="var-label">Variations &amp; tips</span><ul class="var-list"><li>Add ½ tsp salt to the milk before curdling for a lightly seasoned paneer</li><li>Use curd (yoghurt) as the acid for a more traditionally flavoured, softer paneer</li><li>Add 1 tsp dried herbs (mint or fenugreek) to the curds before pressing for a flavoured paneer</li><li>Press for only 10 minutes for a very soft, spreadable paneer similar to chenna — ideal for sweets</li></ul></div>
+    </main>
+  </div>
+  <section class="related">
+    <div class="related-inner">
+      <div class="related-label">More staples to make</div>
+      <div class="related-grid"><a href="ghee.html" class="related-card"><span class="related-tag">Cooking Staples</span><div class="related-name">Homemade Ghee</div><p class="related-desc">The essential fat for cooking paneer dishes.</p></a><a href="curd.html" class="related-card"><span class="related-tag">Cooking Staples</span><div class="related-name">Homemade Curd (Dahi)</div><p class="related-desc">Use leftover whey in curd-based dishes.</p></a><a href="mango-pickle.html" class="related-card"><span class="related-tag">Cooking Staples</span><div class="related-name">Indian Mango Pickle</div><p class="related-desc">A fiery, tangy side to serve alongside paneer parathas.</p></a></div>
+    </div>
+  </section>
+  <div data-include="footer"></div>
+  <script>
+    const observer=new IntersectionObserver((e)=>{e.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80)});},{threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
