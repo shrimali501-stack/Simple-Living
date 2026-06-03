@@ -4,52 +4,11 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/article.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/sl-favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/sl-favicon.png">
   <link rel="apple-touch-icon" href="sl-favicon.png">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
-    html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
-    
-    .post-hero{background:var(--parchment);border-bottom:1px solid var(--border)}.post-hero-inner{max-width:760px;margin:0 auto;padding:48px 40px 60px}
-    .post-category{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
-    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:24px}.post-title em{font-style:italic;color:var(--sage-dark)}
-    .post-subtitle{font-size:18px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:600px}
-    .post-meta{display:flex;align-items:center;gap:20px;padding-top:24px;border-top:1px solid var(--border)}.meta-item{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.meta-sep{color:var(--border)}
-    .post-cover{width:100%;min-height:320px;display:flex;align-items:center;justify-content:center;font-size:120px}
-    .post-body{max-width:680px;margin:0 auto;padding:72px 40px 100px}
-    .post-body p{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.85;margin-bottom:28px}
-    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--charcoal);margin:56px 0 20px;line-height:1.2}.post-body h2 em{font-style:italic;color:var(--sage-dark)}
-    .post-body h3{font-size:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-dark);margin:40px 0 14px}
-    .post-body ul,.post-body ol{margin:0 0 28px 24px}.post-body li{font-size:17px;font-weight:300;color:var(--charcoal);line-height:1.8;margin-bottom:10px}
-    .post-body strong{font-weight:500}.post-body em{font-style:italic;color:var(--sage-dark)}
-    .pull-quote{margin:48px 0;padding:32px 40px;border-left:3px solid var(--terracotta);background:var(--parchment)}.pull-quote p{font-family:'Cormorant Garamond',serif;font-size:26px!important;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.4!important;margin:0!important}
-    .tip-box{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--sage-dark);padding:24px 28px;margin:40px 0}.tip-box-label{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:10px}.tip-box p{margin:0!important;font-size:15px!important}
-    .post-divider{width:60px;height:1px;background:var(--terracotta);margin:48px 0}
-    .related{background:var(--white);border-top:1px solid var(--border);padding:72px 60px}.related-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:32px;display:flex;align-items:center;gap:14px}.related-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--terracotta)}
-    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1080px}.related-card{text-decoration:none;display:block}.related-img{aspect-ratio:3/2;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;transition:transform .4s}.related-card:hover .related-img{transform:scale(1.03)}.related-tag{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px;display:block}.related-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;line-height:1.3;color:var(--charcoal)}
-    footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content:space-between;align-items:center}.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);text-decoration:none}.footer-copy{font-size:12px;color:rgba(247,243,238,0.4)}.footer-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,0.5);text-decoration:none;transition:color .2s}.footer-back:hover{color:var(--cream)}
-    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.post-hero-inner{padding:60px 24px 40px}.post-body{padding:48px 24px 72px}.related{padding:48px 24px}.related-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:16px;text-align:center}.post-cover img { width: 100% !important; }}
-    .breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  color: #7A7A72;
-  margin-bottom: 1.2rem;
-}
-.breadcrumb a {
-  color: #7A7A72;
-  text-decoration: none;
-  transition: color .2s;
-}
-.breadcrumb a:hover { color: #4A5E3E; }
-.breadcrumb .bc-sep { color: #C8C5BC; }
-.breadcrumb .bc-current { color: #2C2C28; }
-  </style>
+ 
 <title>How to Build a Capsule Wardrobe from Scratch | Sukara Living</title>
 <meta name="description" content="Build your perfect capsule wardrobe with Sukara Living. Learn what a capsule wardrobe is, how to build it, and create a minimalist female wardrobe that lasts.">
 <meta name="keywords" content="capsule wardrobe, minimalist wardrobe, slow fashion, declutter clothes, sustainable style">
@@ -79,7 +38,7 @@
     width="1600"
     height="900"
     fetchpriority="high"
-    style="width:60%;height:500px;object-fit:cover;display:block;border-radius:2px;"
+    
   >
 </div>
   <article class="post-body fade-up">
