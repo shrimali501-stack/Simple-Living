@@ -105,7 +105,7 @@ footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content
   .nav-links{display:none}
   .post-hero-inner{padding:60px 24px 40px}
   .post-body{padding:48px 24px 72px}
-  .post-cover img{width:100%;height:56vw}
+  .post-cover img{width:100%;height:auto;max-height:480px}
   .pull-quote{padding:24px 20px}
   .pull-quote p{font-size:21px!important}
   .method-grid{grid-template-columns:1fr}
