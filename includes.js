@@ -5,19 +5,18 @@ async function loadInclude(selector, url) {
     const res  = await fetch(url);
     const html = await res.text();
 
-    // Parse the fetched HTML
     const parser = new DOMParser();
     const doc    = parser.parseFromString(html, 'text/html');
 
-    // Move any <style> blocks into <head> so they apply globally
+    // Move any <style> blocks into <head>
     doc.querySelectorAll('style').forEach(style => {
       document.head.appendChild(document.adoptNode(style));
     });
 
-    // Replace placeholder with the remaining HTML
+    // Replace placeholder with the HTML (without scripts)
     el.outerHTML = doc.body.innerHTML;
 
-    // Highlight the active nav link based on current URL
+    // Highlight active nav link
     document.querySelectorAll('.nav-links a').forEach(a => {
       try {
         const linkPath    = new URL(a.href).pathname;
@@ -29,6 +28,17 @@ async function loadInclude(selector, url) {
           a.classList.add('active');
         }
       } catch (e) {}
+    });
+
+    // Re-execute any <script> blocks from the fetched HTML
+    doc.querySelectorAll('script').forEach(oldScript => {
+      const newScript = document.createElement('script');
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      } else {
+        newScript.textContent = oldScript.textContent;
+      }
+      document.body.appendChild(newScript);
     });
 
   } catch (e) {

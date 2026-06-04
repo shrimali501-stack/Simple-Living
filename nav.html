@@ -1,148 +1,20 @@
-<style>
-  /* ── SHARED NAV STYLES ── */
-  nav.site-nav {
-    position: sticky; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 6px 60px;
-    background: rgba(247, 243, 238, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #D8D0C4;
-  }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a {
-    font-size: 12px; font-weight: 500; letter-spacing: .12em;
-    text-transform: uppercase; color: #7A7A72;
-    text-decoration: none; transition: color .2s;
-  }
-  .nav-links a:hover,
-  .nav-links a.active { color: #4A5E3E; }
-  .nav-cta {
-    font-size: 12px; font-weight: 500; letter-spacing: .1em;
-    text-transform: uppercase; padding: 10px 22px;
-    border: 1px solid #7A8C6E; color: #4A5E3E;
-    background: transparent; cursor: pointer;
-    transition: all .2s; text-decoration: none;
-  }
-  .nav-cta:hover { background: #7A8C6E; color: #FDFCFA; }
-
-  /* ── HAMBURGER BUTTON ── */
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-  }
-  .nav-hamburger span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background: #4A5E3E;
-    transition: all .3s ease;
-    transform-origin: center;
-  }
-
-  /* ── HAMBURGER ANIMATION WHEN OPEN ── */
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-  /* ── MOBILE DROPDOWN MENU ── */
-  .nav-mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(247, 243, 238, 0.98);
-    z-index: 99;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  .nav-mobile-menu.open { display: flex; }
-  .nav-mobile-menu a {
-    font-size: 13px; font-weight: 500; letter-spacing: .16em;
-    text-transform: uppercase; color: #7A7A72;
-    text-decoration: none; transition: color .2s;
-  }
-  .nav-mobile-menu a:hover { color: #4A5E3E; }
-  .nav-mobile-menu .nav-cta {
-    margin-top: 8px;
-    font-size: 12px; font-weight: 500; letter-spacing: .1em;
-    text-transform: uppercase; padding: 10px 28px;
-    border: 1px solid #7A8C6E; color: #4A5E3E;
-    background: transparent; cursor: pointer;
-    transition: all .2s; text-decoration: none;
-  }
-  .nav-mobile-menu .nav-cta:hover { background: #7A8C6E; color: #FDFCFA; }
-
-  @media (max-width: 900px) {
-    nav.site-nav { padding: 12px 24px; }
-    .nav-links, .nav-cta { display: none; }
-    .nav-logo { height: 44px; }
-    .nav-hamburger { display: flex; }
-  }
-</style>
-
-<nav class="site-nav">
-  <a href="https://www.sukaraliving.in/">
-    <img src="https://www.sukaraliving.in/logo.png"
-         alt="Sukara Living"
-         class="nav-logo"
-         style="height: 52px; width: auto; display: block; mix-blend-mode: multiply;">
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://www.sukaraliving.in/articles/">Articles</a></li>
-    <li><a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a></li>
-    <li><a href="https://www.sukaraliving.in/#sustainable">Sustainable</a></li>
-    <li><a href="https://www.sukaraliving.in/about.html">About</a></li>
-  </ul>
-  <a href="#newsletter" class="nav-cta">Subscribe</a>
-  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
-
-<!-- MOBILE FULLSCREEN MENU -->
-<div class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
-  <a href="https://www.sukaraliving.in/articles/">Articles</a>
-  <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a>
-  <a href="https://www.sukaraliving.in/#sustainable">Sustainable</a>
-  <a href="https://www.sukaraliving.in/about.html">About</a>
-  <a href="#newsletter" class="nav-cta">Subscribe</a>
-</div>
-
 <script>
-  function initHamburger() {
-    const hamburger = document.querySelector('.nav-hamburger');
-    const mobileMenu = document.querySelector('.nav-mobile-menu');
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.querySelector('.nav-mobile-menu');
 
-    if (!hamburger || !mobileMenu) {
-      setTimeout(initHamburger, 50);
-      return;
-    }
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
     });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        document.body.style.overflow = '';
-      });
-    });
-  }
-
-  initHamburger();
+  });
 </script>
