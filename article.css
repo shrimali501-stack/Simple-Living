@@ -100,7 +100,7 @@ footer{background:var(--charcoal);padding:40px 60px;display:flex;justify-content
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* ── MOBILE ───────────────────────────────────── */
-@media(max-width:768px){
+@media(max-width:900px){
   nav{padding:16px 24px}
   .nav-links{display:none}
   .post-hero-inner{padding:60px 24px 40px}
