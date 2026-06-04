@@ -10,15 +10,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- ── ABOUT ─────────────────────────────────────────────── -->
-  <url>
-    <loc>https://www.sukaraliving.in/about.html</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ── ALL ARTICLES PAGE ─────────────────────────────────── -->
+  <!-- ── MAIN SECTION PAGES ────────────────────────────────── -->
   <url>
     <loc>https://www.sukaraliving.in/articles/</loc>
     <lastmod>2026-04-30</lastmod>
@@ -26,8 +18,50 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ── ARTICLES ───────────────────────────────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
+  <!-- ── STATIC PAGES ──────────────────────────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/about.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/contact.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/privacy-policy.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/cookie-policy.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/terms-of-use.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ── ARTICLES ───────────────────────────────────────────── -->
   <url>
     <loc>https://www.sukaraliving.in/articles/art-of-organizing.html</loc>
     <lastmod>2026-04-30</lastmod>
@@ -103,6 +137,284 @@
       <image:loc>https://www.sukaraliving.in/digital-minimalism-card.webp</image:loc>
       <image:title>A minimal digital workspace promoting intentional screen time</image:title>
     </image:image>
+  </url>
+
+  <!-- ── MAKE AT HOME — CATEGORY PAGES ─────────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── MAKE AT HOME — MASALAS ─────────────────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/garam-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/chaat-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/biryani-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/sambar-powder.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/pav-bhaji-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/chole-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/chai-masala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/masalas/rasam-powder.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── MAKE AT HOME — HOME CLEANING ──────────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/disinfectant-spray.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/cleaning-paste.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/glass-cleaner.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/liquid-dish-soap.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/dishwasher-detergent.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/oven-cleaner.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/home-cleaning/drain-cleaner.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── MAKE AT HOME — BODY & SKIN CARE ───────────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/body-butter.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/sugar-scrub.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/lotion-bars.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/lavender-salve.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/body-oil.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/lip-balm.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/rose-face-toner.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/hair-oil.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/body-skin-care/turmeric-face-mask.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── MAKE AT HOME — DAILY COOKING STAPLES ──────────────── -->
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/ghee.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/paneer.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/curd.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/peanut-butter.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/pickled-onions.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/mango-pickle.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/granola.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/butter.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/almond-granola.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/strawberry-chia-jam.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/roasted-garlic-hummus.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/croutons.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sukaraliving.in/make-at-home/daily-cooking-staples/everything-bagel-seasoning.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
