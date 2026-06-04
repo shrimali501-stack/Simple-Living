@@ -13,7 +13,13 @@ async function loadInclude(selector, url) {
       document.head.appendChild(document.adoptNode(style));
     });
 
-    // Replace placeholder with the HTML (without scripts)
+    // Collect scripts before replacing HTML
+    const scripts = Array.from(doc.querySelectorAll('script'));
+
+    // Remove scripts from doc so they don't inject twice
+    scripts.forEach(s => s.remove());
+
+    // Replace placeholder with HTML (now script-free)
     el.outerHTML = doc.body.innerHTML;
 
     // Highlight active nav link
@@ -30,16 +36,18 @@ async function loadInclude(selector, url) {
       } catch (e) {}
     });
 
-    // Re-execute any <script> blocks from the fetched HTML
-    doc.querySelectorAll('script').forEach(oldScript => {
-      const newScript = document.createElement('script');
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-      } else {
-        newScript.textContent = oldScript.textContent;
-      }
-      document.body.appendChild(newScript);
-    });
+    // Execute scripts after a tick so DOM is ready
+    setTimeout(() => {
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement('script');
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
+    }, 0);
 
   } catch (e) {
     console.warn('Could not load include:', url, e);
