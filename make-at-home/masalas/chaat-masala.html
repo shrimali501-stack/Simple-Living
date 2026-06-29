@@ -14,7 +14,7 @@
     :root{--cream:#F7F3EE;--parchment:#EDE8DF;--sage-light:#B5C4A8;--sage-dark:#4A5E3E;--terracotta:#C47B5A;--charcoal:#2C2C28;--muted:#7A7A72;--border:#D8D0C4;--white:#FDFCFA}
     html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.7}
     .breadcrumb{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.04em;color:#7A7A72;margin-bottom:1.4rem;flex-wrap:wrap}.breadcrumb a{color:#7A7A72;text-decoration:none;transition:color .2s}.breadcrumb a:hover{color:#4A5E3E}.bc-sep{color:#C8C5BC}.bc-current{color:#2C2C28}
-    .recipe-hero{background:var(--parchment);border-bottom:1px solid var(--border);padding:56px 60px 52px}.recipe-hero-inner{max-width:760px}
+    .recipe-hero{background:var(--parchment);border-bottom:1px solid var(--border);padding:56px 60px 52px}.recipe-hero-inner{max-width:1120px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:center}.recipe-hero-copy{max-width:760px}.recipe-hero-image{width:100%;height:auto;border:1px solid var(--border);display:block;background:var(--white)}
     .eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:18px;display:flex;align-items:center;gap:12px}.eyebrow::after{content:'';width:36px;height:1px;background:var(--terracotta)}
     .recipe-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:18px}.recipe-title em{font-style:italic;color:var(--sage-dark)}
     .recipe-intro{font-size:17px;font-weight:300;color:var(--muted);max-width:560px;line-height:1.85;margin-bottom:32px}
@@ -30,7 +30,7 @@
     .uses-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.5rem 0 2.5rem}.use-item{background:var(--white);border:1px solid var(--border);padding:.85rem 1rem;font-size:13.5px;font-weight:300;color:var(--charcoal);display:flex;gap:10px;align-items:center;line-height:1.4}.use-item::before{content:'✦';color:var(--terracotta);font-size:10px;flex-shrink:0}
     .related{background:var(--white);border-top:1px solid var(--border);padding:60px}.related-inner{max-width:1120px;margin:0 auto}.related-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:28px;display:flex;align-items:center;gap:12px}.related-label::after{content:'';width:36px;height:1px;background:var(--terracotta)}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}.related-card{text-decoration:none;color:inherit;background:var(--cream);border:1px solid var(--border);padding:1.25rem;display:block;transition:transform .2s,box-shadow .2s}.related-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(42,41,37,.08)}.related-tag{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);display:block;margin-bottom:6px}.related-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--charcoal);margin-bottom:4px;line-height:1.3}.related-desc{font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.55}
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:960px){.recipe-body{grid-template-columns:1fr;gap:2rem;padding:40px 24px 72px}.recipe-sidebar{position:static}.recipe-hero{padding:48px 24px 40px}.quick-stats{max-width:100%}.related{padding:48px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.uses-grid{grid-template-columns:1fr}}
+    @media(max-width:960px){.recipe-body{grid-template-columns:1fr;gap:2rem;padding:40px 24px 72px}.recipe-sidebar{position:static}.recipe-hero{padding:48px 24px 40px}.recipe-hero-inner{grid-template-columns:1fr;gap:28px}.quick-stats{max-width:100%}.related{padding:48px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.uses-grid{grid-template-columns:1fr}}
     @media(max-width:580px){.quick-stats{flex-wrap:wrap}.stat{border-right:none;border-bottom:1px solid var(--border);flex:1 1 40%}.related-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
@@ -60,6 +60,7 @@
   "recipeYield": "80g",
   "recipeCategory": "Spice Blend",
   "recipeCuisine": "Indian",
+  "image": "https://www.sukaraliving.in/make-at-home/masalas/chaat%20masala.webp",
   "keywords": "chaat masala, homemade chaat masala, kala namak, amchur, Indian spice blend, chaat seasoning",
   "recipeIngredient": [
     "3 tbsp cumin seeds",
@@ -171,21 +172,24 @@
 
   <div class="recipe-hero">
     <div class="recipe-hero-inner">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="https://www.sukaraliving.in/">Home</a><span class="bc-sep">›</span>
-        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a><span class="bc-sep">›</span>
-        <a href="https://www.sukaraliving.in/make-at-home/masalas.html">Masalas</a><span class="bc-sep">›</span>
-        <span class="bc-current">Chaat Masala</span>
-      </nav>
-      <p class="eyebrow">Masalas</p>
-      <h1 class="recipe-title">Homemade <em>Chaat Masala</em></h1>
-      <p class="recipe-intro">Tangy, spicy, and deeply savoury — chaat masala is the seasoning that makes everything instantly more interesting. The secret is kala namak (black salt), whose sulphurous, egg-like aroma is entirely unique and irreplaceable.</p>
-      <div class="quick-stats">
-        <div class="stat"><span class="stat-label">Prep time</span><span class="stat-value">5 mins</span></div>
-        <div class="stat"><span class="stat-label">Cook time</span><span class="stat-value">5 mins</span></div>
-        <div class="stat"><span class="stat-label">Makes</span><span class="stat-value">~80g</span></div>
-        <div class="stat"><span class="stat-label">Stores</span><span class="stat-value">2 months</span></div>
+      <div class="recipe-hero-copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="https://www.sukaraliving.in/">Home</a><span class="bc-sep">›</span>
+          <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a><span class="bc-sep">›</span>
+          <a href="https://www.sukaraliving.in/make-at-home/masalas.html">Masalas</a><span class="bc-sep">›</span>
+          <span class="bc-current">Chaat Masala</span>
+        </nav>
+        <p class="eyebrow">Masalas</p>
+        <h1 class="recipe-title">Homemade <em>Chaat Masala</em></h1>
+        <p class="recipe-intro">Tangy, spicy, and deeply savoury — chaat masala is the seasoning that makes everything instantly more interesting. The secret is kala namak (black salt), whose sulphurous, egg-like aroma is entirely unique and irreplaceable.</p>
+        <div class="quick-stats">
+          <div class="stat"><span class="stat-label">Prep time</span><span class="stat-value">5 mins</span></div>
+          <div class="stat"><span class="stat-label">Cook time</span><span class="stat-value">5 mins</span></div>
+          <div class="stat"><span class="stat-label">Makes</span><span class="stat-value">~80g</span></div>
+          <div class="stat"><span class="stat-label">Stores</span><span class="stat-value">2 months</span></div>
+        </div>
       </div>
+      <img class="recipe-hero-image" src="chaat%20masala.webp" alt="Homemade chaat masala spice blend" width="1000" height="545" loading="eager">
     </div>
   </div>
 

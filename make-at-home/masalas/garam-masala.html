@@ -19,7 +19,9 @@
     .breadcrumb a:hover{color:#4A5E3E}
     .bc-sep{color:#C8C5BC}.bc-current{color:#2C2C28}
     .recipe-hero{background:var(--parchment);border-bottom:1px solid var(--border);padding:56px 60px 52px}
-    .recipe-hero-inner{max-width:760px}
+    .recipe-hero-inner{max-width:1120px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:center}
+    .recipe-hero-copy{max-width:760px}
+    .recipe-hero-image{width:100%;height:auto;border:1px solid var(--border);display:block;background:var(--white)}
     .eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:18px;display:flex;align-items:center;gap:12px}
     .eyebrow::after{content:'';width:36px;height:1px;background:var(--terracotta)}
     .recipe-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:18px}
@@ -76,7 +78,7 @@
     .related-desc{font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.55}
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
     .fade-up.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:960px){.recipe-body{grid-template-columns:1fr;gap:2rem;padding:40px 24px 72px}.recipe-sidebar{position:static}.recipe-hero{padding:48px 24px 40px}.quick-stats{max-width:100%}.related{padding:48px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.uses-grid{grid-template-columns:1fr}}
+    @media(max-width:960px){.recipe-body{grid-template-columns:1fr;gap:2rem;padding:40px 24px 72px}.recipe-sidebar{position:static}.recipe-hero{padding:48px 24px 40px}.recipe-hero-inner{grid-template-columns:1fr;gap:28px}.quick-stats{max-width:100%}.related{padding:48px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.uses-grid{grid-template-columns:1fr}}
     @media(max-width:580px){.quick-stats{flex-wrap:wrap}.stat{border-right:none;border-bottom:1px solid var(--border);flex:1 1 40%}.related-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
@@ -106,6 +108,7 @@
   "recipeYield": "100g",
   "recipeCategory": "Spice Blend",
   "recipeCuisine": "Indian",
+  "image": "https://www.sukaraliving.in/make-at-home/masalas/Masala.webp",
   "keywords": "garam masala, homemade garam masala, Indian spice blend, whole spice masala, garam masala recipe",
   "recipeIngredient": [
     "4 tbsp coriander seeds",
@@ -218,21 +221,24 @@
 
   <div class="recipe-hero">
     <div class="recipe-hero-inner">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="https://www.sukaraliving.in/">Home</a><span class="bc-sep">›</span>
-        <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a><span class="bc-sep">›</span>
-        <a href="https://www.sukaraliving.in/make-at-home/masalas.html">Masalas</a><span class="bc-sep">›</span>
-        <span class="bc-current">Garam Masala</span>
-      </nav>
-      <p class="eyebrow">Masalas</p>
-      <h1 class="recipe-title">Homemade <em>Garam Masala</em></h1>
-      <p class="recipe-intro">The backbone of Indian cooking. Warm, layered, and deeply aromatic — a freshly ground garam masala transforms every curry, dal, and biryani in a way no store-bought packet ever can.</p>
-      <div class="quick-stats">
-        <div class="stat"><span class="stat-label">Prep time</span><span class="stat-value">5 mins</span></div>
-        <div class="stat"><span class="stat-label">Cook time</span><span class="stat-value">10 mins</span></div>
-        <div class="stat"><span class="stat-label">Makes</span><span class="stat-value">~100g</span></div>
-        <div class="stat"><span class="stat-label">Stores</span><span class="stat-value">3 months</span></div>
+      <div class="recipe-hero-copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="https://www.sukaraliving.in/">Home</a><span class="bc-sep">›</span>
+          <a href="https://www.sukaraliving.in/make-at-home/">Make at Home</a><span class="bc-sep">›</span>
+          <a href="https://www.sukaraliving.in/make-at-home/masalas.html">Masalas</a><span class="bc-sep">›</span>
+          <span class="bc-current">Garam Masala</span>
+        </nav>
+        <p class="eyebrow">Masalas</p>
+        <h1 class="recipe-title">Homemade <em>Garam Masala</em></h1>
+        <p class="recipe-intro">The backbone of Indian cooking. Warm, layered, and deeply aromatic — a freshly ground garam masala transforms every curry, dal, and biryani in a way no store-bought packet ever can.</p>
+        <div class="quick-stats">
+          <div class="stat"><span class="stat-label">Prep time</span><span class="stat-value">5 mins</span></div>
+          <div class="stat"><span class="stat-label">Cook time</span><span class="stat-value">10 mins</span></div>
+          <div class="stat"><span class="stat-label">Makes</span><span class="stat-value">~100g</span></div>
+          <div class="stat"><span class="stat-label">Stores</span><span class="stat-value">3 months</span></div>
+        </div>
       </div>
+      <img class="recipe-hero-image" src="Masala.webp" alt="Homemade garam masala spice blend" width="1000" height="668" loading="eager">
     </div>
   </div>
 
